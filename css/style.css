@@ -41,7 +41,7 @@
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.12), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
   --shadow-glow: 0 0 25px rgba(13, 148, 136, 0.25);
   
-  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-bg: rgba(255, 255, 255, 0.9);
   --glass-border: rgba(255, 255, 255, 0.5);
   --glass-blur: blur(12px);
 
@@ -223,7 +223,7 @@ ul, ol {
 }
 
 .site-header.scrolled {
-  background: rgba(7, 19, 38, 0.95);
+  background: rgba(7, 19, 38, 0.96);
   border-bottom-color: rgba(255, 255, 255, 0.1);
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
 }
@@ -242,14 +242,29 @@ ul, ol {
   text-decoration: none;
 }
 
+.brand-logos-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .brand-logo {
-  height: 48px;
-  width: 48px;
+  height: 44px;
+  width: 44px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--accent-gold);
   box-shadow: var(--shadow-sm);
   background: #ffffff;
+}
+
+.brand-logo-snb {
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  background: #071326;
+  border: 2px solid var(--accent-teal);
+  padding: 1px;
 }
 
 .brand-text {
@@ -433,16 +448,16 @@ ul, ol {
 }
 
 /* ==========================================================================
-   Hero Section
+   Simplified & Clean Hero Section
    ========================================================================== */
 .hero-section {
   position: relative;
   min-height: 100vh;
-  padding-top: calc(var(--header-height) + 2rem);
+  padding-top: calc(var(--header-height) + 1.5rem);
   padding-bottom: 5rem;
   display: flex;
   align-items: center;
-  background: radial-gradient(circle at 80% 20%, #17366b 0%, #071326 70%);
+  background: #071326;
   color: var(--text-white);
   overflow: hidden;
 }
@@ -450,20 +465,20 @@ ul, ol {
 .hero-bg-overlay {
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(135deg, rgba(7, 19, 38, 0.94) 0%, rgba(7, 19, 38, 0.82) 50%, rgba(13, 148, 136, 0.3) 100%), 
+  background-image: linear-gradient(90deg, rgba(7, 19, 38, 0.96) 0%, rgba(7, 19, 38, 0.88) 45%, rgba(7, 19, 38, 0.4) 100%), 
                     url('../images/physchem-hero-banner.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: right center;
   background-repeat: no-repeat;
-  opacity: 0.92;
+  opacity: 0.95;
   z-index: 1;
 }
 
 .hero-particles {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle, rgba(245, 158, 11, 0.08) 1px, transparent 1px);
-  background-size: 32px 32px;
+  background: radial-gradient(circle at 10% 20%, rgba(13, 148, 136, 0.12) 0%, transparent 40%),
+              radial-gradient(circle at 80% 80%, rgba(245, 158, 11, 0.08) 0%, transparent 40%);
   z-index: 2;
   pointer-events: none;
 }
@@ -477,72 +492,96 @@ ul, ol {
 .hero-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 3rem;
+  gap: 2.5rem;
   align-items: center;
 }
 
 @media (min-width: 1024px) {
   .hero-grid {
-    grid-template-columns: 1.15fr 0.85fr;
+    grid-template-columns: 1.2fr 0.8fr;
     gap: 3.5rem;
   }
 }
 
-.hero-badges-wrapper {
+/* Dual Logo Header in Hero */
+.hero-logos-showcase {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  background: rgba(14, 34, 70, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-lg);
+  padding: 0.85rem 1.25rem;
+  backdrop-filter: blur(12px);
+  width: fit-content;
+}
+
+.hero-logo-item {
+  display: flex;
   align-items: center;
   gap: 0.75rem;
-  margin-bottom: 1.25rem;
 }
 
-.hero-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.4rem 1rem;
-  border-radius: var(--radius-full);
-  background: rgba(245, 158, 11, 0.15);
-  color: var(--accent-gold-light);
-  border: 1px solid var(--border-gold);
-  font-size: 0.875rem;
+.hero-logo-divider {
+  width: 1px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.hero-logo-img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border: 2px solid var(--accent-gold);
+  background: #ffffff;
+  flex-shrink: 0;
+}
+
+.hero-logo-img.snb-logo {
+  border-color: var(--accent-teal);
+  background: #071326;
+}
+
+.hero-logo-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-logo-label {
+  font-size: 0.85rem;
   font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  color: var(--text-white);
+  line-height: 1.2;
 }
 
-.hero-org-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.4rem 1rem;
-  border-radius: var(--radius-full);
-  background: rgba(20, 184, 166, 0.15);
+.hero-logo-sub {
+  font-size: 0.725rem;
   color: var(--accent-teal-light);
-  border: 1px solid rgba(20, 184, 166, 0.35);
-  font-size: 0.875rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .hero-title {
   font-size: 2.35rem;
   font-weight: 800;
   color: var(--text-white);
-  line-height: 1.18;
-  margin-bottom: 1.25rem;
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
   letter-spacing: -0.025em;
   text-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
 
 @media (min-width: 640px) {
   .hero-title {
-    font-size: 3rem;
+    font-size: 2.85rem;
   }
 }
 
 @media (min-width: 1024px) {
   .hero-title {
-    font-size: 3.35rem;
+    font-size: 3.25rem;
   }
 }
 
@@ -553,18 +592,25 @@ ul, ol {
 }
 
 .hero-subtitle {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #e2e8f0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--accent-teal-light);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.hero-tagline {
+  font-size: 1rem;
+  color: #cbd5e1;
   margin-bottom: 1.75rem;
-  line-height: 1.5;
+  font-style: italic;
 }
 
 .hero-meta-list {
   display: flex;
   flex-direction: column;
   gap: 0.875rem;
-  margin-bottom: 2.25rem;
+  margin-bottom: 2rem;
 }
 
 @media (min-width: 640px) {
@@ -584,8 +630,8 @@ ul, ol {
 }
 
 .hero-meta-icon {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   color: var(--accent-gold-light);
   flex-shrink: 0;
 }
@@ -599,8 +645,8 @@ ul, ol {
 
 /* Hero Right: Interactive Card */
 .hero-card {
-  background: rgba(14, 34, 70, 0.75);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(14, 34, 70, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: var(--radius-lg);
   padding: 2rem;
   backdrop-filter: blur(16px);

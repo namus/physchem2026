@@ -44,7 +44,10 @@
   <header class="site-header">
     <div class="container nav-container">
       <a href="#home" class="brand-wrapper">
-        <img src="./images/conference_logo.jpeg" alt="Conference Logo" class="brand-logo">
+        <div class="brand-logos-group">
+          <img src="./images/conference_logo.jpeg" alt="FPC 2026 Logo" class="brand-logo">
+          <img src="./images/snbncbs_logo.svg" alt="SNBNCBS Logo" class="brand-logo-snb">
+        </div>
         <div class="brand-text">
           <span class="brand-title">PhysChem 2026</span>
           <span class="brand-subtitle">SNBNCBS, Kolkata</span>
@@ -97,7 +100,7 @@
   </div>
 
   <!-- ==========================================================================
-       Hero Section
+       Hero Section (Simplified, Clean & Elegant)
        ========================================================================== -->
   <section id="home" class="hero-section">
     <div class="hero-bg-overlay"></div>
@@ -105,18 +108,35 @@
 
     <div class="container hero-content">
       <div class="hero-grid">
-        <!-- Left Column: Title & Key Highlights -->
+        <!-- Left Column: Logos, Title & Key Highlights -->
         <div class="hero-text-col">
-          <div class="hero-badges-wrapper">
-            <span class="hero-tag">Flagship National Conference</span>
-            <span class="hero-org-tag">S. N. Bose National Centre for Basic Sciences</span>
+          <!-- Dual Logos Showcase Badge -->
+          <div class="hero-logos-showcase">
+            <div class="hero-logo-item">
+              <img src="./images/conference_logo.jpeg" alt="FPC 2026 Conference Logo" class="hero-logo-img">
+              <div class="hero-logo-meta">
+                <span class="hero-logo-label">FPC 2026</span>
+                <span class="hero-logo-sub">Conference</span>
+              </div>
+            </div>
+            <div class="hero-logo-divider"></div>
+            <div class="hero-logo-item">
+              <img src="./images/snbncbs_logo.svg" alt="SNBNCBS Official Logo" class="hero-logo-img snb-logo">
+              <div class="hero-logo-meta">
+                <span class="hero-logo-label">SNBNCBS</span>
+                <span class="hero-logo-sub">Host Institute</span>
+              </div>
+            </div>
           </div>
 
           <h1 class="hero-title">
             Frontiers of <span class="hero-title-highlight">Physical Chemistry</span>
           </h1>
-          <p class="hero-subtitle">
+          <div class="hero-subtitle">
             Experiments, Computations and Theory
+          </div>
+          <p class="hero-tagline">
+            A flagship meeting of Physical Chemistry in India
           </p>
 
           <div class="hero-meta-list">
@@ -1247,6 +1267,7 @@
         <div>
           <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
             <img src="./images/conference_logo.jpeg" alt="Logo" style="width: 42px; height: 42px; border-radius: 50%; border: 2px solid var(--accent-gold);">
+            <img src="./images/snbncbs_logo.svg" alt="SNBNCBS Logo" style="width: 42px; height: 42px; border-radius: 50%; border: 2px solid var(--accent-teal); background: #071326;">
             <div>
               <h4 style="color: #ffffff; font-size: 1.1rem; margin: 0;">PhysChem 2026</h4>
               <span style="font-size: 0.75rem; color: var(--accent-teal-light);">SNBNCBS, Kolkata</span>
