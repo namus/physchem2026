@@ -7,13 +7,13 @@
   'use strict';
 
   document.addEventListener('DOMContentLoaded', () => {
-    // 1. Sticky Header on Scroll
+    // 1. Sticky Header & Back to Top on Scroll
     const header = document.querySelector('.site-header');
     const backToTopBtn = document.getElementById('back-to-top');
 
     function handleScroll() {
       const scrollY = window.scrollY || window.pageYOffset;
-      if (scrollY > 50) {
+      if (scrollY > 40) {
         header?.classList.add('scrolled');
       } else {
         header?.classList.remove('scrolled');
@@ -56,7 +56,7 @@
     const navLinks = document.querySelectorAll('.nav-link');
 
     function navHighlight() {
-      const scrollPosition = window.scrollY + 120;
+      const scrollPosition = window.scrollY + 140;
 
       sections.forEach(section => {
         const top = section.offsetTop;
@@ -65,7 +65,8 @@
 
         if (scrollPosition >= top && scrollPosition < top + height) {
           navLinks.forEach(link => {
-            link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+            const href = link.getAttribute('href');
+            link.classList.toggle('active', href === `#${id}`);
           });
         }
       });
@@ -73,7 +74,26 @@
 
     window.addEventListener('scroll', navHighlight, { passive: true });
 
-    // 4. Back to Top Smooth Scroll
+    // 4. Presenter Tabs Switcher (Invited Speakers vs Poster Presenters)
+    const presenterTabBtns = document.querySelectorAll('.presenter-tab-btn');
+    const presenterPanes = document.querySelectorAll('.presenter-pane');
+
+    presenterTabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetTab = btn.getAttribute('data-tab');
+
+        presenterTabBtns.forEach(b => b.classList.remove('active'));
+        presenterPanes.forEach(p => p.classList.remove('active'));
+
+        btn.classList.add('active');
+        const targetPane = document.getElementById(targetTab);
+        if (targetPane) {
+          targetPane.classList.add('active');
+        }
+      });
+    });
+
+    // 5. Back to Top Smooth Scroll
     if (backToTopBtn) {
       backToTopBtn.addEventListener('click', () => {
         window.scrollTo({
@@ -83,59 +103,31 @@
       });
     }
 
-    // 5. FAQ Accordion Toggle
+    // 6. FAQ Accordion Toggle
     const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach(item => {
       const questionBtn = item.querySelector('.faq-question');
-      if (questionBtn) {
+      const answer = item.querySelector('.faq-answer');
+
+      if (questionBtn && answer) {
         questionBtn.addEventListener('click', () => {
           const isOpen = item.classList.contains('open');
-          // Close others
-          faqItems.forEach(other => other.classList.remove('open'));
+
+          // Close all items
+          faqItems.forEach(other => {
+            other.classList.remove('open');
+            const otherAns = other.querySelector('.faq-answer');
+            if (otherAns) otherAns.style.maxHeight = null;
+          });
+
+          // Open current if it was not open
           if (!isOpen) {
             item.classList.add('open');
+            answer.style.maxHeight = answer.scrollHeight + 'px';
           }
         });
       }
     });
-
-    // 6. First Announcement Modal
-    const modal = document.getElementById('announcement-modal');
-    const openModalBtns = document.querySelectorAll('.open-announcement-modal');
-    const closeModalBtns = document.querySelectorAll('.close-modal-btn');
-
-    function openModal() {
-      if (modal) {
-        modal.classList.add('open');
-        document.body.style.overflow = 'hidden';
-      }
-    }
-
-    function closeModal() {
-      if (modal) {
-        modal.classList.remove('open');
-        document.body.style.overflow = '';
-      }
-    }
-
-    openModalBtns.forEach(btn => btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      openModal();
-    }));
-
-    closeModalBtns.forEach(btn => btn.addEventListener('click', closeModal));
-
-    if (modal) {
-      modal.addEventListener('click', (e) => {
-        if (e.target === modal) closeModal();
-      });
-
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.classList.contains('open')) {
-          closeModal();
-        }
-      });
-    }
   });
 
   // Share Conference Link Helper
@@ -148,7 +140,7 @@
       }).catch(() => {});
     } else {
       navigator.clipboard.writeText(window.location.href).then(() => {
-        alert('Conference link copied to clipboard!');
+        alert('Conference website link copied to clipboard!');
       });
     }
   };
