@@ -373,7 +373,10 @@ ul, ol {
 
 @media (min-width: 1080px) {
   .mobile-toggle {
-    display: none;
+    display: none !important;
+  }
+  .mobile-drawer {
+    display: none !important;
   }
 }
 
