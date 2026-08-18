@@ -8,7 +8,7 @@
   <title>Frontiers of Physical Chemistry 2026 | SNBNCBS Kolkata</title>
   <meta name="title" content="Frontiers of Physical Chemistry 2026 | SNBNCBS Kolkata">
   <meta name="description" content="Frontiers of Physical Chemistry: Experiments, Computations and Theory — A flagship national conference in Physical Chemistry, held at S. N. Bose National Centre for Basic Sciences (SNBNCBS), Kolkata from October 28–31, 2026.">
-  <meta name="keywords" content="Physical Chemistry 2026, SNBNCBS Kolkata, SoPhyC, Theoretical Chemistry, Molecular Dynamics, Ultrafast Spectroscopy, Chemical Physics, AI in Chemistry, Biophysical Chemistry, Suman Chakrabarty, Ranjit Biswas">
+  <meta name="keywords" content="Physical Chemistry 2026, SNBNCBS Kolkata, SoPhyC, Theoretical Chemistry, Molecular Dynamics, Ultrafast Spectroscopy, Chemical Physics, AI in Chemistry, Biophysical Chemistry, Ranjit Biswas, Suman Chakrabarty">
   <meta name="author" content="Organizing Committee, Frontiers of Physical Chemistry 2026">
   
   <!-- Open Graph / Facebook / LinkedIn -->
@@ -46,7 +46,7 @@
       <a href="#home" class="brand-wrapper">
         <div class="brand-logos-group">
           <img src="./images/conference_logo.jpeg" alt="FPC 2026 Logo" class="brand-logo">
-          <img src="./images/snbncbs_logo.svg" alt="SNBNCBS Logo" class="brand-logo-snb">
+          <img src="./images/SNBNCBS_Logo-64X90.png" alt="SNBNCBS Logo" class="brand-logo-snb">
         </div>
         <div class="brand-text">
           <span class="brand-title">PhysChem 2026</span>
@@ -61,6 +61,7 @@
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#themes" class="nav-link">Themes</a></li>
           <li><a href="#speakers" class="nav-link">Speakers</a></li>
+          <li><a href="#posters" class="nav-link">Poster Presenters</a></li>
           <li><a href="#committees" class="nav-link">Committees</a></li>
           <li><a href="#program" class="nav-link">Program</a></li>
           <li><a href="#registration" class="nav-link">Registration</a></li>
@@ -87,7 +88,8 @@
     <a href="#home" class="mobile-nav-link">Home</a>
     <a href="#about" class="mobile-nav-link">About the Conference</a>
     <a href="#themes" class="mobile-nav-link">Scientific Themes</a>
-    <a href="#speakers" class="mobile-nav-link">Invited Speakers</a>
+    <a href="#speakers" class="mobile-nav-link">Invited Speakers (Tentative)</a>
+    <a href="#posters" class="mobile-nav-link">Invited Poster Presenters (Tentative)</a>
     <a href="#committees" class="mobile-nav-link">Organizing Committees</a>
     <a href="#program" class="mobile-nav-link">Scientific Program</a>
     <a href="#registration" class="mobile-nav-link">Registration & Dates</a>
@@ -121,7 +123,7 @@
             </div>
             <div class="hero-logo-divider"></div>
             <div class="hero-logo-item">
-              <img src="./images/snbncbs_logo.svg" alt="SNBNCBS Official Logo" class="hero-logo-img snb-logo">
+              <img src="./images/SNBNCBS_Logo-64X90.png" alt="SNBNCBS Official Logo" class="hero-logo-img snb-logo">
               <div class="hero-logo-meta">
                 <span class="hero-logo-label">SNBNCBS</span>
                 <span class="hero-logo-sub">Host Institute</span>
@@ -273,7 +275,7 @@
 
             <div style="display: flex; align-items: center; gap: 0.75rem;">
               <div style="width: 42px; height: 42px; border-radius: 50%; background: rgba(217, 119, 6, 0.1); color: var(--accent-gold); display: flex; align-items: center; justify-content: center; font-weight: 700;">
-                35+
+                30+
               </div>
               <div>
                 <strong style="display: block; color: var(--primary-900);">Invited Lectures</strong>
@@ -409,19 +411,19 @@
   </section>
 
   <!-- ==========================================================================
-       Invited Speakers Section
+       Invited Speakers Section (Tentative)
        ========================================================================== -->
   <section id="speakers" class="section section-alt">
     <div class="container">
       <div class="section-header">
         <span class="section-badge">Distinguished Faculty</span>
-        <h2 class="section-title">Invited Speakers & Leaders</h2>
+        <h2 class="section-title">Invited Speakers (Tentative)</h2>
         <p class="section-desc">
           Featuring eminent physical and biophysical chemists, senior practitioners, and pioneers from premier Indian research institutions, IITs, IISERs, and universities.
         </p>
       </div>
 
-      <!-- Speakers Filter & Search Toolbar -->
+      <!-- Speakers Search Toolbar (Single Search Box) -->
       <div class="speakers-toolbar">
         <div class="speaker-search-box">
           <svg class="speaker-search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -429,20 +431,9 @@
           </svg>
           <input type="text" id="speaker-search" class="speaker-search-input" placeholder="Search by name, institute or topic...">
         </div>
-
-        <div class="filter-pills-wrapper">
-          <button class="filter-pill active" data-filter="all">All (34+)</button>
-          <button class="filter-pill" data-filter="iisc-tifr-jncasr">IISc / TIFR / JNCASR</button>
-          <button class="filter-pill" data-filter="iits">IITs</button>
-          <button class="filter-pill" data-filter="iisers">IISERs</button>
-          <button class="filter-pill" data-filter="research-institutes">Research Institutes</button>
-          <button class="filter-pill" data-filter="universities">Universities</button>
-          <button class="filter-pill" data-filter="snbncbs">SNBNCBS</button>
+        <div>
+          <span id="speakers-count" style="font-size: 0.9rem; font-weight: 600; color: var(--text-subtle);">Loading speakers...</span>
         </div>
-      </div>
-
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
-        <span id="speakers-count" style="font-size: 0.9rem; font-weight: 600; color: var(--text-subtle);">Loading speakers...</span>
       </div>
 
       <!-- Speaker Cards Grid -->
@@ -459,9 +450,38 @@
   </section>
 
   <!-- ==========================================================================
+       Invited Poster Presenters Section (Tentative)
+       ========================================================================== -->
+  <section id="posters" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Poster Presentations</span>
+        <h2 class="section-title">Invited Poster Presenters (Tentative)</h2>
+        <p class="section-desc">
+          Showcasing poster contributions from senior faculty members, mentors, young investigators, and research scholars across India.
+        </p>
+      </div>
+
+      <div style="background: var(--bg-surface); border: 2px dashed var(--border-light); border-radius: var(--radius-lg); padding: 3.5rem 2rem; max-width: 750px; margin: 0 auto; text-align: center; box-shadow: var(--shadow-sm);">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: rgba(217, 119, 6, 0.1); color: var(--accent-gold); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem auto;">
+          <svg style="width: 26px; height: 26px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+          </svg>
+        </div>
+        <h3 style="font-size: 1.5rem; color: var(--primary-900); margin-bottom: 0.5rem;">
+          To be updated shortly
+        </h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 550px; margin: 0 auto;">
+          The tentative list of invited poster presenters and contributed abstracts will be announced here soon upon conclusion of the review process.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
        Organizing Committees
        ========================================================================== -->
-  <section id="committees" class="section">
+  <section id="committees" class="section section-alt">
     <div class="container">
       <div class="section-header">
         <span class="section-badge">Leadership & Organization</span>
@@ -472,25 +492,25 @@
       </div>
 
       <div class="committee-wrapper">
-        <!-- Conveners Block -->
+        <!-- Conveners Block (Ranjit Biswas first, Suman Chakrabarty second) -->
         <div class="committee-block">
           <div class="committee-block-header">
             <h3 class="committee-block-title">Conveners</h3>
           </div>
           <div class="committee-grid">
             <div class="committee-card">
-              <div class="committee-avatar">SC</div>
+              <div class="committee-avatar">RB</div>
               <div class="committee-details">
-                <span class="committee-name">Prof. Suman Chakrabarty</span>
+                <span class="committee-name">Prof. Ranjit Biswas</span>
                 <span class="committee-role-badge">Convener</span>
                 <span class="committee-inst">SNBNCBS, Kolkata</span>
               </div>
             </div>
 
             <div class="committee-card">
-              <div class="committee-avatar">RB</div>
+              <div class="committee-avatar">SC</div>
               <div class="committee-details">
-                <span class="committee-name">Prof. Ranjit Biswas</span>
+                <span class="committee-name">Prof. Suman Chakrabarty</span>
                 <span class="committee-role-badge">Convener</span>
                 <span class="committee-inst">SNBNCBS, Kolkata</span>
               </div>
@@ -601,279 +621,33 @@
   </section>
 
   <!-- ==========================================================================
-       Scientific Program / Schedule
+       Scientific Program (To be announced)
        ========================================================================== -->
-  <section id="program" class="section section-alt">
+  <section id="program" class="section">
     <div class="container">
       <div class="section-header">
         <span class="section-badge">Conference Schedule</span>
-        <h2 class="section-title">Scientific Program Outline</h2>
+        <h2 class="section-title">Scientific Program</h2>
         <p class="section-desc">
           Four days of inspiring plenary talks, thematic technical sessions, young investigator presentations, and vibrant poster interactions.
         </p>
       </div>
 
-      <!-- Schedule Tab Navigation -->
-      <div class="schedule-nav">
-        <button class="schedule-tab-btn active" data-tab="day-1">
-          <span class="tab-day">Day 1</span>
-          <span class="tab-date">Oct 28 (Wed)</span>
-        </button>
-        <button class="schedule-tab-btn" data-tab="day-2">
-          <span class="tab-day">Day 2</span>
-          <span class="tab-date">Oct 29 (Thu)</span>
-        </button>
-        <button class="schedule-tab-btn" data-tab="day-3">
-          <span class="tab-day">Day 3</span>
-          <span class="tab-date">Oct 30 (Fri)</span>
-        </button>
-        <button class="schedule-tab-btn" data-tab="day-4">
-          <span class="tab-day">Day 4</span>
-          <span class="tab-date">Oct 31 (Sat)</span>
-        </button>
-      </div>
-
-      <!-- Schedule Panes -->
-      <div class="schedule-content">
-        <!-- Day 1 Pane -->
-        <div class="schedule-pane active" id="day-1">
-          <div class="timeline-list">
-            <div class="timeline-item highlight-session">
-              <div class="timeline-time-col">
-                <span class="timeline-time">14:00 – 15:30</span>
-                <span class="timeline-badge">Registration</span>
-              </div>
-              <div class="timeline-content">
-                <h4>Registration & Welcome Desk</h4>
-                <p>Delegate check-in, kit collection, and badge distribution at Silver Jubilee Hall Lobby.</p>
-              </div>
-            </div>
-
-            <div class="timeline-item highlight-session">
-              <div class="timeline-time-col">
-                <span class="timeline-time">15:30 – 16:15</span>
-                <span class="timeline-badge">Inaugural</span>
-              </div>
-              <div class="timeline-content">
-                <h4>Inaugural Ceremony & Welcome Address</h4>
-                <p>Opening remarks by Director SNBNCBS, Conference Conveners, and introduction to the scope of the meeting.</p>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-time-col">
-                <span class="timeline-time">16:15 – 17:45</span>
-                <span class="timeline-badge">Keynotes</span>
-              </div>
-              <div class="timeline-content">
-                <h4>Inaugural Keynote Lectures (Session I)</h4>
-                <p>Plenary talks on cutting-edge directions in Physical Chemistry and Quantum Dynamics.</p>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-time-col">
-                <span class="timeline-time">17:45 – 19:00</span>
-                <span class="timeline-badge">Networking</span>
-              </div>
-              <div class="timeline-content">
-                <h4>Welcome High Tea & Faculty Mixer</h4>
-                <p>Informal networking and discussion meeting at the SNBNCBS Lawns.</p>
-              </div>
-            </div>
-          </div>
+      <div style="background: var(--bg-surface); border: 2px dashed var(--border-light); border-radius: var(--radius-lg); padding: 4rem 2rem; max-width: 800px; margin: 0 auto; text-align: center; box-shadow: var(--shadow-sm);">
+        <div style="width: 56px; height: 56px; border-radius: 50%; background: rgba(13, 148, 136, 0.1); color: var(--accent-teal-dark); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem auto;">
+          <svg style="width: 28px; height: 28px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+          </svg>
         </div>
-
-        <!-- Day 2 Pane -->
-        <div class="schedule-pane" id="day-2">
-          <div class="timeline-list">
-            <div class="timeline-item">
-              <div class="timeline-time-col">
-                <span class="timeline-time">09:00 – 11:00</span>
-                <span class="timeline-badge">Session II</span>
-              </div>
-              <div class="timeline-content">
-                <h4>Technical Session: Ultrafast & Nonlinear Spectroscopy</h4>
-                <p>Invited talks on femtosecond time-resolved spectroscopy, THz dynamics, and laser methods.</p>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-time-col">
-                <span class="timeline-time">11:00 – 11:30</span>
-                <span class="timeline-badge">Break</span>
-              </div>
-              <div class="timeline-content">
-                <h4>Tea / Coffee Break</h4>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-time-col">
-                <span class="timeline-time">11:30 – 13:30</span>
-                <span class="timeline-badge">Session III</span>
-              </div>
-              <div class="timeline-content">
-                <h4>Technical Session: Molecular Liquids & Complex Interfaces</h4>
-                <p>Solvation dynamics, ionic liquids, deep eutectics, and soft matter transitions.</p>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-time-col">
-                <span class="timeline-time">13:30 – 14:30</span>
-                <span class="timeline-badge">Lunch</span>
-              </div>
-              <div class="timeline-content">
-                <h4>Lunch & Poster Setup</h4>
-              </div>
-            </div>
-
-            <div class="timeline-item highlight-session">
-              <div class="timeline-time-col">
-                <span class="timeline-time">14:30 – 17:00</span>
-                <span class="timeline-badge">Posters I</span>
-              </div>
-              <div class="timeline-content">
-                <h4>Poster Session I & Young Faculty Flash Talks</h4>
-                <p>Interactive poster session by senior faculty members, postdocs, and PhD research scholars.</p>
-              </div>
-            </div>
-
-            <div class="timeline-item highlight-session">
-              <div class="timeline-time-col">
-                <span class="timeline-time">19:30 – 22:00</span>
-                <span class="timeline-badge">Dinner</span>
-              </div>
-              <div class="timeline-content">
-                <h4>Conference Banquet Dinner</h4>
-                <p>Special conference dinner with delegates, invited speakers, and organizers.</p>
-              </div>
-            </div>
-          </div>
+        <h3 style="font-size: 1.85rem; color: var(--primary-900); margin-bottom: 0.75rem;">
+          To be announced
+        </h3>
+        <p style="color: var(--text-muted); font-size: 1.05rem; max-width: 600px; margin: 0 auto 1.5rem auto;">
+          The detailed day-wise scientific schedule, session timings, and talk titles will be announced in due course.
+        </p>
+        <div style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.4rem 1.25rem; border-radius: var(--radius-full); background: rgba(245, 158, 11, 0.12); color: var(--accent-gold-hover); font-weight: 600; font-size: 0.9rem;">
+          <span>Conference Dates: October 28 – 31, 2026 (SNBNCBS, Kolkata)</span>
         </div>
-
-        <!-- Day 3 Pane -->
-        <div class="schedule-pane" id="day-3">
-          <div class="timeline-list">
-            <div class="timeline-item">
-              <div class="timeline-time-col">
-                <span class="timeline-time">09:00 – 11:00</span>
-                <span class="timeline-badge">Session IV</span>
-              </div>
-              <div class="timeline-content">
-                <h4>Technical Session: AI/ML, Quantum Chemistry & Electronic Structure</h4>
-                <p>Machine learning in physical chemistry, DFT advances, and correlated electron simulations.</p>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-time-col">
-                <span class="timeline-time">11:00 – 11:30</span>
-                <span class="timeline-badge">Break</span>
-              </div>
-              <div class="timeline-content">
-                <h4>Tea / Coffee Break</h4>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-time-col">
-                <span class="timeline-time">11:30 – 13:30</span>
-                <span class="timeline-badge">Session V</span>
-              </div>
-              <div class="timeline-content">
-                <h4>Technical Session: Reaction Dynamics & Energy Materials</h4>
-                <p>Electrochemistry, porous frameworks, catalysis, and atmospheric reaction pathways.</p>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-time-col">
-                <span class="timeline-time">13:30 – 14:30</span>
-                <span class="timeline-badge">Lunch</span>
-              </div>
-              <div class="timeline-content">
-                <h4>Lunch</h4>
-              </div>
-            </div>
-
-            <div class="timeline-item highlight-session">
-              <div class="timeline-time-col">
-                <span class="timeline-time">14:30 – 17:00</span>
-                <span class="timeline-badge">Posters II</span>
-              </div>
-              <div class="timeline-content">
-                <h4>Poster Session II & Short Presentations</h4>
-                <p>Selected oral presentations by young investigators and poster evaluation.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Day 4 Pane -->
-        <div class="schedule-pane" id="day-4">
-          <div class="timeline-list">
-            <div class="timeline-item">
-              <div class="timeline-time-col">
-                <span class="timeline-time">09:00 – 11:00</span>
-                <span class="timeline-badge">Session VI</span>
-              </div>
-              <div class="timeline-content">
-                <h4>Technical Session: Biophysical Chemistry & Biomolecular Dynamics</h4>
-                <p>Protein dynamics, biological hydration, enzyme catalysis, and single-molecule kinetics.</p>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-time-col">
-                <span class="timeline-time">11:00 – 11:30</span>
-                <span class="timeline-badge">Break</span>
-              </div>
-              <div class="timeline-content">
-                <h4>Tea / Coffee Break</h4>
-              </div>
-            </div>
-
-            <div class="timeline-item highlight-session">
-              <div class="timeline-time-col">
-                <span class="timeline-time">11:30 – 13:00</span>
-                <span class="timeline-badge">Student Talks</span>
-              </div>
-              <div class="timeline-content">
-                <h4>Selected Student Presentations & Awards</h4>
-                <p>Contributed oral presentations by students and Best Poster Award announcements.</p>
-              </div>
-            </div>
-
-            <div class="timeline-item highlight-session">
-              <div class="timeline-time-col">
-                <span class="timeline-time">13:00 – 13:45</span>
-                <span class="timeline-badge">Valedictory</span>
-              </div>
-              <div class="timeline-content">
-                <h4>Valedictory Session & Concluding Remarks</h4>
-                <p>Conference summary, feedback from participants, and vote of thanks.</p>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-time-col">
-                <span class="timeline-time">13:45 onwards</span>
-                <span class="timeline-badge">Lunch</span>
-              </div>
-              <div class="timeline-content">
-                <h4>Farewell Lunch & Departure</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div style="text-align: center; margin-top: 2rem;">
-        <span style="font-size: 0.9rem; color: var(--text-subtle); font-style: italic;">
-          * Detailed program schedule with exact talk titles, speakers, and chairpersons will be updated closer to the conference date.
-        </span>
       </div>
     </div>
   </section>
@@ -881,7 +655,7 @@
   <!-- ==========================================================================
        Registration & Important Dates
        ========================================================================== -->
-  <section id="registration" class="section">
+  <section id="registration" class="section section-alt">
     <div class="container">
       <div class="section-header">
         <span class="section-badge">Participation</span>
@@ -1026,7 +800,7 @@
   <!-- ==========================================================================
        Venue, Accommodation & Travel
        ========================================================================== -->
-  <section id="venue" class="section section-alt">
+  <section id="venue" class="section">
     <div class="container">
       <div class="section-header">
         <span class="section-badge">Host City & Logistics</span>
@@ -1121,7 +895,7 @@
   <!-- ==========================================================================
        FAQ Accordion
        ========================================================================== -->
-  <section id="faq" class="section">
+  <section id="faq" class="section section-alt">
     <div class="container">
       <div class="section-header">
         <span class="section-badge">Help & Guidelines</span>
@@ -1215,22 +989,22 @@
 
       <div style="display: grid; grid-template-columns: 1fr; gap: 2.5rem; max-width: 1000px; margin: 0 auto;">
         <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem;" class="grid-sm-2">
-          <!-- Contact Card 1 -->
+          <!-- Contact Card 1: Conveners (Ranjit Biswas first, Suman Chakrabarty second) -->
           <div style="background: var(--bg-dark-card); border: 1px solid var(--border-dark); border-radius: var(--radius-lg); padding: 2rem;">
             <h3 style="font-size: 1.25rem; color: var(--accent-gold-light); margin-bottom: 1rem;">Conference Conveners</h3>
             
             <div style="margin-bottom: 1.25rem;">
-              <strong style="color: #ffffff; display: block; font-size: 1.05rem;">Prof. Suman Chakrabarty</strong>
-              <span style="font-size: 0.9rem; color: #94a3b8;">Department of Chemical & Biological Sciences, SNBNCBS</span><br>
-              <span style="font-size: 0.9rem; color: var(--accent-teal-light);">Email: <a href="mailto:sumanc@bose.res.in" style="color: var(--accent-teal-light);">sumanc@bose.res.in</a></span><br>
-              <span style="font-size: 0.9rem; color: #cbd5e1;">Mobile: +91 96045 58056</span>
-            </div>
-
-            <div>
               <strong style="color: #ffffff; display: block; font-size: 1.05rem;">Prof. Ranjit Biswas</strong>
               <span style="font-size: 0.9rem; color: #94a3b8;">Department of Chemical & Biological Sciences, SNBNCBS</span><br>
               <span style="font-size: 0.9rem; color: var(--accent-teal-light);">Email: <a href="mailto:ranjit@bose.res.in" style="color: var(--accent-teal-light);">ranjit@bose.res.in</a></span><br>
               <span style="font-size: 0.9rem; color: #cbd5e1;">Mobile: +91 84798 92565</span>
+            </div>
+
+            <div>
+              <strong style="color: #ffffff; display: block; font-size: 1.05rem;">Prof. Suman Chakrabarty</strong>
+              <span style="font-size: 0.9rem; color: #94a3b8;">Department of Chemical & Biological Sciences, SNBNCBS</span><br>
+              <span style="font-size: 0.9rem; color: var(--accent-teal-light);">Email: <a href="mailto:sumanc@bose.res.in" style="color: var(--accent-teal-light);">sumanc@bose.res.in</a></span><br>
+              <span style="font-size: 0.9rem; color: #cbd5e1;">Mobile: +91 96045 58056</span>
             </div>
           </div>
 
@@ -1247,7 +1021,7 @@
             </div>
 
             <div style="display: flex; gap: 0.75rem;">
-              <a href="mailto:sumanc@bose.res.in?cc=ranjit@bose.res.in,sophyc.contact@gmail.com&subject=Query%20-%20Frontiers%20of%20Physical%20Chemistry%202026" class="btn btn-gold btn-sm" style="flex: 1; text-align: center;">
+              <a href="mailto:ranjit@bose.res.in?cc=sumanc@bose.res.in,sophyc.contact@gmail.com&subject=Query%20-%20Frontiers%20of%20Physical%20Chemistry%202026" class="btn btn-gold btn-sm" style="flex: 1; text-align: center;">
                 Send Query Email
               </a>
             </div>
@@ -1267,7 +1041,7 @@
         <div>
           <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
             <img src="./images/conference_logo.jpeg" alt="Logo" style="width: 42px; height: 42px; border-radius: 50%; border: 2px solid var(--accent-gold);">
-            <img src="./images/snbncbs_logo.svg" alt="SNBNCBS Logo" style="width: 42px; height: 42px; border-radius: 50%; border: 2px solid var(--accent-teal); background: #071326;">
+            <img src="./images/SNBNCBS_Logo-64X90.png" alt="SNBNCBS Logo" style="height: 42px; width: auto; border-radius: 4px; border: 1.5px solid var(--accent-teal); background: #ffffff; padding: 1px 3px;">
             <div>
               <h4 style="color: #ffffff; font-size: 1.1rem; margin: 0;">PhysChem 2026</h4>
               <span style="font-size: 0.75rem; color: var(--accent-teal-light);">SNBNCBS, Kolkata</span>
@@ -1285,6 +1059,7 @@
             <li><a href="#about">About Conference</a></li>
             <li><a href="#themes">Scientific Scope</a></li>
             <li><a href="#speakers">Invited Speakers</a></li>
+            <li><a href="#posters">Poster Presenters</a></li>
             <li><a href="#program">Program Outline</a></li>
             <li><a href="#registration">Registration & Fees</a></li>
           </ul>

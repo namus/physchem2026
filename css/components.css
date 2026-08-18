@@ -231,8 +231,8 @@
 .speakers-toolbar {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
-  margin-bottom: 2.5rem;
+  gap: 1rem;
+  margin-bottom: 2rem;
   background: var(--bg-surface);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-lg);
@@ -240,7 +240,7 @@
   box-shadow: var(--shadow-sm);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   .speakers-toolbar {
     flex-direction: row;
     align-items: center;
@@ -251,7 +251,7 @@
 .speaker-search-box {
   position: relative;
   flex: 1;
-  max-width: 400px;
+  max-width: 500px;
 }
 
 .speaker-search-input {
