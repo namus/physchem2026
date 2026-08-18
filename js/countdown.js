@@ -49,7 +49,7 @@
   window.addToGoogleCalendar = function () {
     const title = encodeURIComponent("Frontiers of Physical Chemistry 2026 (SNBNCBS Kolkata)");
     const details = encodeURIComponent(
-      "Frontiers of Physical Chemistry: Experiments, Computations and Theory — A flagship meeting of Physical Chemistry in India.\n\nVenue: S. N. Bose National Centre for Basic Sciences, Salt Lake, Kolkata.\nWebsite: https://namus.github.io/physchem2026"
+      "Frontiers of Physical Chemistry: Experiments, Computations and Theory — A flagship meeting of Physical Chemistry in India.\n\nVenue: S. N. Bose National Centre for Basic Sciences, Salt Lake, Kolkata.\nWebsite: https://fpc2026.in"
     );
     const location = encodeURIComponent("S. N. Bose National Centre for Basic Sciences (SNBNCBS), JD Block, Sector III, Salt Lake, Kolkata 700106, India");
     // Start: Oct 28, 2026 09:00 IST -> 20261028T033000Z
@@ -75,7 +75,7 @@
       "DTSTART:20261028T033000Z",
       "DTEND:20261031T083000Z",
       "STATUS:CONFIRMED",
-      "URL:https://namus.github.io/physchem2026",
+      "URL:https://fpc2026.in",
       "END:VEVENT",
       "END:VCALENDAR"
     ].join("\r\n");

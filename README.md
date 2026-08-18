@@ -2,8 +2,9 @@
 
 Website for the flagship national conference **"Frontiers of Physical Chemistry: Experiments, Computations and Theory"**, hosted at the **S. N. Bose National Centre for Basic Sciences (SNBNCBS), Kolkata** from **October 28 – 31, 2026**.
 
-## 🌐 Live URL on GitHub Pages
-- Planned URL: `https://namus.github.io/physchem2026/` (or user root domain `https://namus.github.io/`)
+## 🌐 Live Custom Domain
+- **Official Website**: **[https://fpc2026.in/](https://fpc2026.in/)**
+- GitHub Pages URL: `https://namus.github.io/physchem2026/`
 
 ---
 
