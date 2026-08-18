@@ -322,20 +322,7 @@ ul, ol {
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 0.65rem;
   flex-shrink: 0;
-}
-
-@media (max-width: 1199px) {
-  .nav-btn-abstract {
-    display: none;
-  }
-}
-
-@media (max-width: 768px) {
-  .nav-btn-register {
-    display: none;
-  }
 }
 
 /* Mobile Toggle */
