@@ -238,61 +238,30 @@ ul, ol {
 .brand-wrapper {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
   text-decoration: none;
   flex-shrink: 0;
+  margin-right: 2.5rem;
+  transition: transform var(--transition-fast);
 }
 
-.brand-logos-group {
-  display: flex;
-  align-items: center;
-  gap: 0.45rem;
+.brand-wrapper:hover {
+  transform: scale(1.05);
 }
 
 .brand-logo {
-  height: 40px;
-  width: 40px;
+  height: 48px;
+  width: 48px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--accent-gold);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
   background: #ffffff;
+  transition: box-shadow var(--transition-fast), border-color var(--transition-fast);
 }
 
-.brand-logo-snb {
-  height: 40px;
-  width: auto;
-  border-radius: 4px;
-  background: #ffffff;
-  border: 1.5px solid var(--accent-teal);
-  padding: 1px 3px;
-  object-fit: contain;
-}
-
-.brand-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.brand-title {
-  font-family: var(--font-heading);
-  font-weight: 800;
-  font-size: 1.125rem;
-  color: var(--primary-900);
-  line-height: 1.15;
-  letter-spacing: -0.01em;
-  transition: color var(--transition-fast);
-}
-
-.site-header.scrolled .brand-title {
-  color: var(--text-white);
-}
-
-.brand-subtitle {
-  font-size: 0.725rem;
-  font-weight: 600;
-  color: var(--accent-teal);
-  letter-spacing: 0.02em;
+.brand-wrapper:hover .brand-logo {
+  box-shadow: 0 0 14px rgba(245, 158, 11, 0.45);
+  border-color: var(--accent-gold-light);
 }
 
 /* Nav Menu */
