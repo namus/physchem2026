@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Frontiers of Physical Chemistry 2026 (FPC 2026) - A4 Flyer</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 1200px;
+      height: 1697px;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: #0f172a;
+      line-height: 1.35;
+      -webkit-font-smoothing: antialiased;
+      overflow: hidden;
+    }
+
+    .flyer-container {
+      width: 1200px;
+      height: 1697px;
+      background: #ffffff;
+      padding: 48px 56px 40px 56px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Top decorative gradient bar */
+    .top-gradient-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 8px;
+      background: linear-gradient(90deg, #071326 0%, #0d9488 50%, #d97706 100%);
+    }
+
+    .corner-glow {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 240px;
+      height: 240px;
+      background: radial-gradient(circle at top right, rgba(13, 148, 136, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* 1. Header */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 14px;
+      margin-bottom: 16px;
+    }
+
+    .logo-fpc {
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #d97706;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      background: #ffffff;
+      flex-shrink: 0;
+    }
+
+    .header-center {
+      text-align: center;
+      flex: 1;
+      padding: 0 16px;
+    }
+
+    .inst-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 19pt;
+      font-weight: 800;
+      color: #071326;
+      letter-spacing: -0.01em;
+      line-height: 1.15;
+    }
+
+    .inst-sub {
+      font-size: 11pt;
+      color: #64748b;
+      font-weight: 500;
+      margin-top: 3px;
+    }
+
+    .announce-tag {
+      display: inline-block;
+      font-family: 'Outfit', sans-serif;
+      font-size: 10pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #0f766e;
+      background: rgba(13, 148, 136, 0.1);
+      padding: 3px 14px;
+      border-radius: 999px;
+      margin-top: 6px;
+      border: 1px solid rgba(13, 148, 136, 0.25);
+    }
+
+    .logo-snb {
+      height: 76px;
+      width: auto;
+      border-radius: 6px;
+      border: 2px solid #0d9488;
+      padding: 2px 4px;
+      background: #ffffff;
+      object-fit: contain;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      flex-shrink: 0;
+    }
+
+    /* 2. Conference Title Section */
+    .title-section {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .conf-main-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 29pt;
+      font-weight: 900;
+      color: #071326;
+      line-height: 1.12;
+      letter-spacing: -0.025em;
+      margin-bottom: 4px;
+    }
+
+    .acronym {
+      color: #0d9488;
+    }
+
+    .conf-subtitle {
+      font-family: 'Outfit', sans-serif;
+      font-size: 15.5pt;
+      font-weight: 700;
+      color: #b45309;
+      margin-bottom: 3px;
+    }
+
+    .conf-tagline {
+      font-size: 12.5pt;
+      color: #475569;
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    /* Meta Banner (Dates & Venue) */
+    .meta-banner {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      background: linear-gradient(135deg, #071326 0%, #0e2246 100%);
+      color: #ffffff;
+      border-radius: 10px;
+      padding: 12px 24px;
+      margin: 14px 0 18px 0;
+      box-shadow: 0 6px 16px rgba(7, 19, 38, 0.2);
+    }
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12.5pt;
+    }
+
+    .meta-icon {
+      width: 22px;
+      height: 22px;
+      color: #f59e0b;
+      flex-shrink: 0;
+    }
+
+    .meta-divider {
+      width: 1px;
+      height: 28px;
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    /* 3. Themes Grid (8 Compact Themes) */
+    .section-title-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 13pt;
+      font-weight: 800;
+      color: #071326;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+    }
+
+    .section-line {
+      flex: 1;
+      height: 1.5px;
+      background: #e2e8f0;
+    }
+
+    .themes-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 9px;
+      margin-bottom: 18px;
+    }
+
+    .theme-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 10px 10px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      border-left: 3.5px solid #0d9488;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    }
+
+    .theme-icon {
+      width: 18px;
+      height: 18px;
+      color: #0f766e;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .theme-text {
+      font-size: 9.5pt;
+      font-weight: 700;
+      color: #071326;
+      line-height: 1.25;
+    }
+
+    /* 4. Middle Section: Key Dates & Registration Fees */
+    .middle-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.18fr;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .box-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 14px 16px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+    }
+
+    .box-header {
+      font-family: 'Outfit', sans-serif;
+      font-size: 12pt;
+      font-weight: 800;
+      color: #071326;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding-bottom: 6px;
+      border-bottom: 1.5px solid #e2e8f0;
+    }
+
+    .box-header-icon {
+      width: 18px;
+      height: 18px;
+      color: #d97706;
+    }
+
+    /* Dates Rows */
+    .dates-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6.5px;
+    }
+
+    .date-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 10.2pt;
+    }
+
+    .date-label {
+      color: #475569;
+      font-weight: 500;
+    }
+
+    .date-val {
+      font-weight: 700;
+      color: #071326;
+      background: #f1f5f9;
+      padding: 2px 8px;
+      border-radius: 4px;
+      border: 1px solid #e2e8f0;
+      font-size: 10pt;
+    }
+
+    .date-row.highlight .date-val {
+      background: rgba(217, 119, 6, 0.12);
+      color: #b45309;
+      border-color: rgba(217, 119, 6, 0.35);
+      font-weight: 800;
+    }
+
+    /* Pricing Table */
+    .pricing-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 9.8pt;
+    }
+
+    .pricing-table th {
+      background: #071326;
+      color: #ffffff;
+      font-weight: 700;
+      padding: 5px 8px;
+      text-align: left;
+      font-size: 9.5pt;
+    }
+
+    .pricing-table td {
+      padding: 6px 8px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .pricing-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .badge-fee {
+      font-weight: 800;
+      color: #0f766e;
+      background: rgba(13, 148, 136, 0.1);
+      padding: 2px 7px;
+      border-radius: 4px;
+      white-space: nowrap;
+      font-size: 9.8pt;
+    }
+
+    .badge-fee.gold {
+      color: #b45309;
+      background: rgba(217, 119, 6, 0.12);
+    }
+
+    .pricing-note {
+      font-size: 8.2pt;
+      color: #64748b;
+      margin-top: 8px;
+      line-height: 1.35;
+    }
+
+    /* 5. Signature Tradition Callout */
+    .hallmark-banner {
+      background: linear-gradient(90deg, rgba(13, 148, 136, 0.08) 0%, rgba(217, 119, 6, 0.08) 100%);
+      border: 1.5px dashed #0d9488;
+      border-radius: 8px;
+      padding: 10px 14px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .hallmark-star {
+      width: 24px;
+      height: 24px;
+      color: #d97706;
+      flex-shrink: 0;
+    }
+
+    .hallmark-text {
+      font-size: 9.8pt;
+      color: #071326;
+      line-height: 1.35;
+    }
+
+    /* 6. Committees Summary Grid */
+    .comm-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.25fr 1.6fr;
+      gap: 10px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 10px 14px;
+      margin-bottom: 16px;
+    }
+
+    .comm-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 10pt;
+      font-weight: 800;
+      color: #071326;
+      margin-bottom: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .comm-list {
+      font-size: 9.2pt;
+      color: #475569;
+      line-height: 1.4;
+    }
+
+    .comm-list strong {
+      color: #071326;
+    }
+
+    /* 7. Footer */
+    .footer {
+      margin-top: auto;
+      border-top: 2px solid #071326;
+      padding-top: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .qr-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .qr-code {
+      width: 72px;
+      height: 72px;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 3px;
+      background: #ffffff;
+    }
+
+    .qr-text {
+      font-size: 9pt;
+      color: #475569;
+      line-height: 1.25;
+    }
+
+    .qr-text strong {
+      color: #071326;
+      font-size: 10pt;
+      display: block;
+    }
+
+    .footer-center {
+      text-align: center;
+    }
+
+    .web-link {
+      font-family: 'Outfit', sans-serif;
+      font-size: 15.5pt;
+      font-weight: 900;
+      color: #0f766e;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+
+    .email-line {
+      font-size: 10.2pt;
+      color: #0f172a;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    .footer-address {
+      text-align: right;
+      font-size: 8.8pt;
+      color: #64748b;
+      line-height: 1.3;
+    }
+
+    .footer-address strong {
+      color: #071326;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="flyer-container">
+    <div class="top-gradient-bar"></div>
+    <div class="corner-glow"></div>
+
+    <!-- 1. Header -->
+    <header class="header">
+      <img src="./images/conference_logo.jpeg" alt="FPC 2026 Logo" class="logo-fpc">
+      
+      <div class="header-center">
+        <div class="inst-title">S. N. BOSE NATIONAL CENTRE FOR BASIC SCIENCES</div>
+        <div class="inst-sub">Autonomous Research Institute under Department of Science and Technology (DST), Govt. of India</div>
+        <div class="announce-tag">Announces National Conference</div>
+      </div>
+
+      <img src="./images/SNBNCBS_Logo-64X90.png" alt="SNBNCBS Seal" class="logo-snb">
+    </header>
+
+    <!-- 2. Conference Title Section -->
+    <section class="title-section">
+      <h1 class="conf-main-title">
+        FRONTIERS OF PHYSICAL CHEMISTRY <span class="acronym">(FPC 2026)</span>
+      </h1>
+      <div class="conf-subtitle">
+        Experiments, Computations and Theory
+      </div>
+      <div class="conf-tagline">
+        A flagship national meeting of Physical Chemistry in India
+      </div>
+
+      <!-- Dates & Venue Meta Banner -->
+      <div class="meta-banner">
+        <div class="meta-item">
+          <svg class="meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+          </svg>
+          <span><strong>October 28 – 31, 2026</strong> (Wednesday – Saturday)</span>
+        </div>
+        <div class="meta-divider"></div>
+        <div class="meta-item">
+          <svg class="meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+          </svg>
+          <span><strong>Venue:</strong> SNBNCBS, Salt Lake, Kolkata, India</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Core Scientific Themes -->
+    <section>
+      <div class="section-title-row">
+        <span class="section-title">Core Scientific Themes</span>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="themes-grid">
+        <div class="theme-card">
+          <svg class="theme-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </svg>
+          <span class="theme-text">AI & Machine Learning in Chemistry</span>
+        </div>
+
+        <div class="theme-card">
+          <svg class="theme-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+          </svg>
+          <span class="theme-text">MD of Complex Liquids & Biomolecules</span>
+        </div>
+
+        <div class="theme-card">
+          <svg class="theme-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+          </svg>
+          <span class="theme-text">Ultrafast & Nonlinear Spectroscopy</span>
+        </div>
+
+        <div class="theme-card">
+          <svg class="theme-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+          </svg>
+          <span class="theme-text">Chemical Physics & Quantum Chemistry</span>
+        </div>
+
+        <div class="theme-card">
+          <svg class="theme-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+          </svg>
+          <span class="theme-text">Reaction Dynamics & Kinetics</span>
+        </div>
+
+        <div class="theme-card">
+          <svg class="theme-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+          </svg>
+          <span class="theme-text">Electrochemistry & Energy Materials</span>
+        </div>
+
+        <div class="theme-card">
+          <svg class="theme-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          <span class="theme-text">Atmospheric & Astrochemistry</span>
+        </div>
+
+        <div class="theme-card">
+          <svg class="theme-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+          </svg>
+          <span class="theme-text">Method Development: Exp. & Theory</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Middle Grid: Key Dates & Registration Fees -->
+    <div class="middle-grid">
+      <!-- Dates Box -->
+      <div class="box-card">
+        <div class="box-header">
+          <svg class="box-header-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          <span>Important Milestone Dates</span>
+        </div>
+
+        <div class="dates-list">
+          <div class="date-row highlight">
+            <span class="date-label">Abstract Submission Opens:</span>
+            <span class="date-val">20th Aug, 2026</span>
+          </div>
+          <div class="date-row">
+            <span class="date-label">Last Date for Abstract Submission:</span>
+            <span class="date-val">10th Sept, 2026</span>
+          </div>
+          <div class="date-row">
+            <span class="date-label">Intimation of Acceptance:</span>
+            <span class="date-val">15th Sept, 2026</span>
+          </div>
+          <div class="date-row highlight">
+            <span class="date-label">Registration Opens:</span>
+            <span class="date-val">1st Sept, 2026</span>
+          </div>
+          <div class="date-row">
+            <span class="date-label">Registration Closes:</span>
+            <span class="date-val">30th Sept, 2026</span>
+          </div>
+          <div class="date-row highlight">
+            <span class="date-label"><strong>Conference Dates:</strong></span>
+            <span class="date-val"><strong>Oct 28–31, 2026</strong></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fees Box -->
+      <div class="box-card">
+        <div class="box-header">
+          <svg class="box-header-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path>
+          </svg>
+          <span>Registration Fee Structure</span>
+        </div>
+
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th>Delegate Category</th>
+              <th>With Accomm.</th>
+              <th>No Accomm.</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Faculty & Scientists</strong></td>
+              <td><span class="badge-fee gold">₹ 19,000/-</span></td>
+              <td><span class="badge-fee">₹ 10,000/-</span></td>
+            </tr>
+            <tr>
+              <td><strong>PhD Scholars & Postdocs</strong></td>
+              <td><span class="badge-fee gold">₹ 9,000/-</span></td>
+              <td><span class="badge-fee">₹ 7,000/-</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="pricing-note">
+          * <strong>Inclusions:</strong> Access to all scientific sessions, conference kit & booklet, all lunches & session refreshments for 3.5 days, conference banquet, certificate. (Shared accommodation in SNBNCBS / Salt Lake guest houses for delegates choosing accommodation package).
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. Signature Tradition Callout -->
+    <div class="hallmark-banner">
+      <svg class="hallmark-star" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+      </svg>
+      <div class="hallmark-text">
+        <strong>Signature Conference Tradition:</strong> Poster presentations by senior faculty members and research mentors are a proud hallmark of this physical chemistry conference series, alongside young investigators, postdoctoral fellows, and PhD researchers (~90 poster presentation slots).
+      </div>
+    </div>
+
+    <!-- 6. Committees Summary Grid -->
+    <div class="comm-grid">
+      <div>
+        <div class="comm-title">Conveners</div>
+        <div class="comm-list">
+          <strong>Prof. Ranjit Biswas</strong> (SNBNCBS)<br>
+          <strong>Prof. Suman Chakrabarty</strong> (SNBNCBS)
+        </div>
+      </div>
+
+      <div>
+        <div class="comm-title">Co-Conveners</div>
+        <div class="comm-list">
+          <strong>Prof. Ayan Datta</strong> (IACS Kolkata)<br>
+          <strong>Prof. Amit Paul</strong> (Bose Institute)<br>
+          <strong>Prof. Susmita Roy</strong> (IISER Kolkata)
+        </div>
+      </div>
+
+      <div>
+        <div class="comm-title">Local Organizing Committee (SNBNCBS)</div>
+        <div class="comm-list">
+          Prof. Ramkrishna Das &bull; Prof. Manik Pradhan<br>
+          Prof. Manoranjan Kumar &bull; Dr. Pradip Pachfule<br>
+          Dr. Arijit Haldar
+        </div>
+      </div>
+    </div>
+
+    <!-- 7. Footer -->
+    <footer class="footer">
+      <div class="qr-group">
+        <img src="./images/fpc2026_qr.svg" alt="QR Code" class="qr-code">
+        <div class="qr-text">
+          <strong>Scan QR Code</strong>
+          <span>To visit website, register<br>& submit abstract</span>
+        </div>
+      </div>
+
+      <div class="footer-center">
+        <a href="https://fpc2026.in" class="web-link">https://fpc2026.in</a>
+        <div class="email-line">
+          Official Email: <strong>fpc2026@bose.res.in</strong>
+        </div>
+      </div>
+
+      <div class="footer-address">
+        <strong>S. N. Bose National Centre for Basic Sciences</strong><br>
+        Block JD, Sector III, Salt Lake<br>
+        Kolkata - 700 106, West Bengal, India
+      </div>
+    </footer>
+  </div>
+
+</body>
+</html>
