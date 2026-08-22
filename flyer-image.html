@@ -24,7 +24,7 @@
       background: #ffffff;
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
       color: #0f172a;
-      line-height: 1.35;
+      line-height: 1.4;
       -webkit-font-smoothing: antialiased;
       overflow: hidden;
     }
@@ -33,9 +33,10 @@
       width: 1200px;
       height: 1697px;
       background: #ffffff;
-      padding: 48px 56px 40px 56px;
+      padding: 40px 50px 32px 50px;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
       position: relative;
       overflow: hidden;
     }
@@ -46,7 +47,7 @@
       top: 0;
       left: 0;
       right: 0;
-      height: 8px;
+      height: 9px;
       background: linear-gradient(90deg, #071326 0%, #0d9488 50%, #d97706 100%);
     }
 
@@ -54,8 +55,8 @@
       position: absolute;
       top: 0;
       right: 0;
-      width: 240px;
-      height: 240px;
+      width: 320px;
+      height: 320px;
       background: radial-gradient(circle at top right, rgba(13, 148, 136, 0.08) 0%, transparent 70%);
       pointer-events: none;
     }
@@ -66,17 +67,16 @@
       align-items: center;
       justify-content: space-between;
       border-bottom: 2px solid #e2e8f0;
-      padding-bottom: 14px;
-      margin-bottom: 16px;
+      padding-bottom: 12px;
     }
 
     .logo-fpc {
-      width: 76px;
-      height: 76px;
+      width: 86px;
+      height: 86px;
       border-radius: 50%;
       object-fit: cover;
-      border: 3px solid #d97706;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border: 3.5px solid #d97706;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
       background: #ffffff;
       flex-shrink: 0;
     }
@@ -84,12 +84,12 @@
     .header-center {
       text-align: center;
       flex: 1;
-      padding: 0 16px;
+      padding: 0 20px;
     }
 
     .inst-title {
       font-family: 'Outfit', sans-serif;
-      font-size: 19pt;
+      font-size: 21pt;
       font-weight: 800;
       color: #071326;
       letter-spacing: -0.01em;
@@ -97,7 +97,7 @@
     }
 
     .inst-sub {
-      font-size: 11pt;
+      font-size: 11.8pt;
       color: #64748b;
       font-weight: 500;
       margin-top: 3px;
@@ -106,44 +106,43 @@
     .announce-tag {
       display: inline-block;
       font-family: 'Outfit', sans-serif;
-      font-size: 10pt;
+      font-size: 10.5pt;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.08em;
       color: #0f766e;
-      background: rgba(13, 148, 136, 0.1);
-      padding: 3px 14px;
+      background: rgba(13, 148, 136, 0.12);
+      padding: 3.5px 18px;
       border-radius: 999px;
-      margin-top: 6px;
-      border: 1px solid rgba(13, 148, 136, 0.25);
+      margin-top: 5px;
+      border: 1.5px solid rgba(13, 148, 136, 0.3);
     }
 
     .logo-snb {
-      height: 76px;
+      height: 86px;
       width: auto;
-      border-radius: 6px;
+      border-radius: 8px;
       border: 2px solid #0d9488;
-      padding: 2px 4px;
+      padding: 3px 5px;
       background: #ffffff;
       object-fit: contain;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
       flex-shrink: 0;
     }
 
     /* 2. Conference Title Section */
     .title-section {
       text-align: center;
-      margin-bottom: 16px;
     }
 
     .conf-main-title {
       font-family: 'Outfit', sans-serif;
-      font-size: 29pt;
+      font-size: 30pt;
       font-weight: 900;
       color: #071326;
       line-height: 1.12;
       letter-spacing: -0.025em;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
 
     .acronym {
@@ -152,14 +151,14 @@
 
     .conf-subtitle {
       font-family: 'Outfit', sans-serif;
-      font-size: 15.5pt;
+      font-size: 16pt;
       font-weight: 700;
       color: #b45309;
-      margin-bottom: 3px;
+      margin-bottom: 2px;
     }
 
     .conf-tagline {
-      font-size: 12.5pt;
+      font-size: 12.8pt;
       color: #475569;
       font-style: italic;
       font-weight: 500;
@@ -173,21 +172,21 @@
       background: linear-gradient(135deg, #071326 0%, #0e2246 100%);
       color: #ffffff;
       border-radius: 10px;
-      padding: 12px 24px;
-      margin: 14px 0 18px 0;
-      box-shadow: 0 6px 16px rgba(7, 19, 38, 0.2);
+      padding: 12px 28px;
+      margin-top: 10px;
+      box-shadow: 0 4px 16px rgba(7, 19, 38, 0.2);
     }
 
     .meta-item {
       display: flex;
       align-items: center;
-      gap: 10px;
-      font-size: 12.5pt;
+      gap: 12px;
+      font-size: 12.8pt;
     }
 
     .meta-icon {
-      width: 22px;
-      height: 22px;
+      width: 23px;
+      height: 23px;
       color: #f59e0b;
       flex-shrink: 0;
     }
@@ -198,17 +197,17 @@
       background: rgba(255, 255, 255, 0.25);
     }
 
-    /* 3. Themes Grid (8 Compact Themes) */
+    /* Section Headings */
     .section-title-row {
       display: flex;
       align-items: center;
       gap: 12px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .section-title {
       font-family: 'Outfit', sans-serif;
-      font-size: 13pt;
+      font-size: 12.5pt;
       font-weight: 800;
       color: #071326;
       text-transform: uppercase;
@@ -218,70 +217,133 @@
 
     .section-line {
       flex: 1;
-      height: 1.5px;
+      height: 2px;
       background: #e2e8f0;
     }
 
+    /* 3. Themes Grid (8 Themes) */
     .themes-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 9px;
-      margin-bottom: 18px;
+      gap: 10px;
     }
 
     .theme-card {
       background: #f8fafc;
       border: 1px solid #e2e8f0;
       border-radius: 8px;
-      padding: 10px 10px;
+      padding: 11px 11px;
       display: flex;
       align-items: flex-start;
-      gap: 8px;
-      border-left: 3.5px solid #0d9488;
+      gap: 9px;
+      border-left: 4px solid #0d9488;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
     }
 
     .theme-icon {
-      width: 18px;
-      height: 18px;
+      width: 19px;
+      height: 19px;
       color: #0f766e;
       flex-shrink: 0;
       margin-top: 1px;
     }
 
     .theme-text {
-      font-size: 9.5pt;
+      font-size: 10pt;
       font-weight: 700;
       color: #071326;
       line-height: 1.25;
     }
 
-    /* 4. Middle Section: Key Dates & Registration Fees */
+    /* 4. Confirmed Invited Speakers Showcase */
+    .speakers-section {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 13px 18px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+    }
+
+    .speakers-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+      border-bottom: 1.5px solid #e2e8f0;
+    }
+
+    .speakers-header-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 12.2pt;
+      font-weight: 800;
+      color: #071326;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .speakers-tag {
+      font-size: 9pt;
+      font-weight: 700;
+      color: #b45309;
+      background: rgba(217, 119, 6, 0.12);
+      padding: 2.5px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(217, 119, 6, 0.25);
+    }
+
+    .speakers-grid-list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 7px 14px;
+    }
+
+    .speaker-item {
+      font-size: 9.2pt;
+      color: #334155;
+      line-height: 1.3;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .speaker-item strong {
+      color: #071326;
+      font-weight: 700;
+    }
+
+    .speaker-item span {
+      color: #0f766e;
+      font-size: 8.2pt;
+      font-weight: 600;
+    }
+
+    /* 5. Middle Grid: Key Dates & Registration Fees */
     .middle-grid {
       display: grid;
       grid-template-columns: 1fr 1.18fr;
-      gap: 14px;
-      margin-bottom: 16px;
+      gap: 15px;
     }
 
     .box-card {
       background: #ffffff;
       border: 1px solid #e2e8f0;
       border-radius: 10px;
-      padding: 14px 16px;
+      padding: 13px 18px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
     }
 
     .box-header {
       font-family: 'Outfit', sans-serif;
-      font-size: 12pt;
+      font-size: 11.8pt;
       font-weight: 800;
       color: #071326;
-      margin-bottom: 10px;
+      margin-bottom: 9px;
       display: flex;
       align-items: center;
       gap: 8px;
-      padding-bottom: 6px;
+      padding-bottom: 5px;
       border-bottom: 1.5px solid #e2e8f0;
     }
 
@@ -295,14 +357,14 @@
     .dates-list {
       display: flex;
       flex-direction: column;
-      gap: 6.5px;
+      gap: 6px;
     }
 
     .date-row {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-size: 10.2pt;
+      font-size: 10pt;
     }
 
     .date-label {
@@ -317,7 +379,7 @@
       padding: 2px 8px;
       border-radius: 4px;
       border: 1px solid #e2e8f0;
-      font-size: 10pt;
+      font-size: 9.8pt;
     }
 
     .date-row.highlight .date-val {
@@ -331,16 +393,16 @@
     .pricing-table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 9.8pt;
+      font-size: 9.6pt;
     }
 
     .pricing-table th {
       background: #071326;
       color: #ffffff;
       font-weight: 700;
-      padding: 5px 8px;
+      padding: 5.5px 8px;
       text-align: left;
-      font-size: 9.5pt;
+      font-size: 9.2pt;
     }
 
     .pricing-table td {
@@ -356,10 +418,10 @@
       font-weight: 800;
       color: #0f766e;
       background: rgba(13, 148, 136, 0.1);
-      padding: 2px 7px;
+      padding: 2px 8px;
       border-radius: 4px;
       white-space: nowrap;
-      font-size: 9.8pt;
+      font-size: 9.6pt;
     }
 
     .badge-fee.gold {
@@ -368,22 +430,21 @@
     }
 
     .pricing-note {
-      font-size: 8.2pt;
+      font-size: 8pt;
       color: #64748b;
-      margin-top: 8px;
+      margin-top: 7px;
       line-height: 1.35;
     }
 
-    /* 5. Signature Tradition Callout */
+    /* 6. Signature Tradition Callout */
     .hallmark-banner {
       background: linear-gradient(90deg, rgba(13, 148, 136, 0.08) 0%, rgba(217, 119, 6, 0.08) 100%);
       border: 1.5px dashed #0d9488;
       border-radius: 8px;
-      padding: 10px 14px;
-      margin-bottom: 16px;
+      padding: 11px 16px;
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
     }
 
     .hallmark-star {
@@ -394,26 +455,25 @@
     }
 
     .hallmark-text {
-      font-size: 9.8pt;
+      font-size: 9.6pt;
       color: #071326;
       line-height: 1.35;
     }
 
-    /* 6. Committees Summary Grid */
+    /* 7. Committees Summary Grid */
     .comm-grid {
       display: grid;
       grid-template-columns: 1fr 1.25fr 1.6fr;
-      gap: 10px;
+      gap: 12px;
       background: #f8fafc;
       border: 1px solid #e2e8f0;
       border-radius: 8px;
-      padding: 10px 14px;
-      margin-bottom: 16px;
+      padding: 12px 16px;
     }
 
     .comm-title {
       font-family: 'Outfit', sans-serif;
-      font-size: 10pt;
+      font-size: 10.2pt;
       font-weight: 800;
       color: #071326;
       margin-bottom: 3px;
@@ -424,17 +484,68 @@
     .comm-list {
       font-size: 9.2pt;
       color: #475569;
-      line-height: 1.4;
+      line-height: 1.45;
     }
 
     .comm-list strong {
       color: #071326;
     }
 
-    /* 7. Footer */
+    /* 8. National Advisory Committee Structured Grid */
+    .advisory-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 12px 16px;
+    }
+
+    .advisory-title-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .advisory-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 10.5pt;
+      font-weight: 800;
+      color: #071326;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .advisory-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px 12px;
+    }
+
+    .advisory-item {
+      font-size: 8.8pt;
+      color: #334155;
+      line-height: 1.3;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .advisory-item strong {
+      color: #071326;
+      font-weight: 700;
+    }
+
+    .advisory-item span {
+      color: #0f766e;
+      font-size: 7.8pt;
+      font-weight: 600;
+    }
+
+    /* 9. Footer */
     .footer {
-      margin-top: auto;
-      border-top: 2px solid #071326;
+      border-top: 2.5px solid #071326;
       padding-top: 12px;
       display: flex;
       align-items: center;
@@ -444,12 +555,12 @@
     .qr-group {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 14px;
     }
 
     .qr-code {
-      width: 72px;
-      height: 72px;
+      width: 76px;
+      height: 76px;
       border: 1.5px solid #cbd5e1;
       border-radius: 6px;
       padding: 3px;
@@ -459,12 +570,12 @@
     .qr-text {
       font-size: 9pt;
       color: #475569;
-      line-height: 1.25;
+      line-height: 1.3;
     }
 
     .qr-text strong {
       color: #071326;
-      font-size: 10pt;
+      font-size: 10.2pt;
       display: block;
     }
 
@@ -474,7 +585,7 @@
 
     .web-link {
       font-family: 'Outfit', sans-serif;
-      font-size: 15.5pt;
+      font-size: 16.5pt;
       font-weight: 900;
       color: #0f766e;
       text-decoration: none;
@@ -482,7 +593,7 @@
     }
 
     .email-line {
-      font-size: 10.2pt;
+      font-size: 10.5pt;
       color: #0f172a;
       font-weight: 600;
       margin-top: 2px;
@@ -492,7 +603,7 @@
       text-align: right;
       font-size: 8.8pt;
       color: #64748b;
-      line-height: 1.3;
+      line-height: 1.35;
     }
 
     .footer-address strong {
@@ -616,7 +727,52 @@
       </div>
     </section>
 
-    <!-- 4. Middle Grid: Key Dates & Registration Fees -->
+    <!-- 4. Eminent Confirmed Invited Speakers Showcase -->
+    <section class="speakers-section">
+      <div class="speakers-header">
+        <div class="speakers-header-title">
+          <svg style="width: 19px; height: 19px; color: #0d9488;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+          </svg>
+          <span>Eminent Invited Speakers (Tentative List)</span>
+        </div>
+        <span class="speakers-tag">23 Confirmed &bull; More Being Invited</span>
+      </div>
+
+      <div class="speakers-grid-list">
+        <div class="speaker-item">&bull; <strong>Amalendu Chandra</strong> <span>(IIT Kanpur)</span></div>
+        <div class="speaker-item">&bull; <strong>Ayan Datta</strong> <span>(IACS Kolkata)</span></div>
+        <div class="speaker-item">&bull; <strong>Biman Bagchi</strong> <span>(IISc Bengaluru)</span></div>
+        <div class="speaker-item">&bull; <strong>Biman Jana</strong> <span>(IACS Kolkata)</span></div>
+        
+        <div class="speaker-item">&bull; <strong>Chayan Nandi</strong> <span>(IIT Mandi)</span></div>
+        <div class="speaker-item">&bull; <strong>Debayan Mondal</strong> <span>(IIT Bombay)</span></div>
+        <div class="speaker-item">&bull; <strong>Hiren Ghosh</strong> <span>(BARC Mumbai)</span></div>
+        <div class="speaker-item">&bull; <strong>Jyotisman Dasgupta</strong> <span>(TIFR Mumbai)</span></div>
+        
+        <div class="speaker-item">&bull; <strong>M. Hariharan</strong> <span>(IISER TVM)</span></div>
+        <div class="speaker-item">&bull; <strong>Manik Pradhan</strong> <span>(SNBNCBS)</span></div>
+        <div class="speaker-item">&bull; <strong>Parbati Biswas</strong> <span>(Univ of Delhi)</span></div>
+        <div class="speaker-item">&bull; <strong>Pradip K Ghorai</strong> <span>(IISER Kolkata)</span></div>
+        
+        <div class="speaker-item">&bull; <strong>Pratik Sen</strong> <span>(IIT Kanpur)</span></div>
+        <div class="speaker-item">&bull; <strong>Rajesh Murarka</strong> <span>(IISER Bhopal)</span></div>
+        <div class="speaker-item">&bull; <strong>Rajib Biswas</strong> <span>(Tezpur Univ)</span></div>
+        <div class="speaker-item">&bull; <strong>Rajib K Mitra</strong> <span>(SNBNCBS)</span></div>
+        
+        <div class="speaker-item">&bull; <strong>S. Balasubramanian</strong> <span>(JNCASR)</span></div>
+        <div class="speaker-item">&bull; <strong>Sanjoy Bandyopadhyay</strong> <span>(IIT KGP)</span></div>
+        <div class="speaker-item">&bull; <strong>Saptarshi Mukherjee</strong> <span>(IISER Bhopal)</span></div>
+        <div class="speaker-item">&bull; <strong>Sarika Bhattacharyya</strong> <span>(NCL Pune)</span></div>
+        
+        <div class="speaker-item">&bull; <strong>Srabani Taraphder</strong> <span>(IIT KGP)</span></div>
+        <div class="speaker-item">&bull; <strong>Susmita Roy</strong> <span>(IISER Kolkata)</span></div>
+        <div class="speaker-item">&bull; <strong>Swapan K Pati</strong> <span>(JNCASR)</span></div>
+        <div class="speaker-item" style="color: #d97706; font-weight: 700;">&bull; <em>+ Contributed Talks</em></div>
+      </div>
+    </section>
+
+    <!-- 5. Middle Grid: Key Dates & Registration Fees -->
     <div class="middle-grid">
       <!-- Dates Box -->
       <div class="box-card">
@@ -633,7 +789,7 @@
             <span class="date-val">20th Aug, 2026</span>
           </div>
           <div class="date-row">
-            <span class="date-label">Last Date for Abstract Submission:</span>
+            <span class="date-label">Last Date for Abstract:</span>
             <span class="date-val">10th Sept, 2026</span>
           </div>
           <div class="date-row">
@@ -692,7 +848,7 @@
       </div>
     </div>
 
-    <!-- 5. Signature Tradition Callout -->
+    <!-- 6. Signature Tradition Callout -->
     <div class="hallmark-banner">
       <svg class="hallmark-star" fill="currentColor" viewBox="0 0 20 20">
         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
@@ -702,7 +858,7 @@
       </div>
     </div>
 
-    <!-- 6. Committees Summary Grid -->
+    <!-- 7. Organizing Leadership & Local Committee -->
     <div class="comm-grid">
       <div>
         <div class="comm-title">Conveners</div>
@@ -731,18 +887,32 @@
       </div>
     </div>
 
-    <!-- National Advisory Committee Strip -->
-    <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 7px 12px; margin-bottom: 14px; text-align: center;">
-      <div style="font-family: 'Outfit', sans-serif; font-size: 9.5pt; font-weight: 800; color: #071326; text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 2px;">
-        National Advisory Committee
+    <!-- 8. National Advisory Committee Structured Grid -->
+    <div class="advisory-box">
+      <div class="advisory-title-row">
+        <span class="advisory-title">National Advisory Committee</span>
+        <span style="font-size: 8.4pt; color: #64748b; font-weight: 600;">12 Distinguished Members</span>
       </div>
-      <div style="font-size: 8pt; color: #475569; line-height: 1.35; font-weight: 500;">
-        Prof. Biman Bagchi &bull; Prof. Anunay Samanta &bull; Prof. Amalendu Chandra &bull; Prof. Anindya Datta &bull; Prof. Sumana Dutta &bull; Prof. Govardhan Reddy<br>
-        Prof. Swati De &bull; Prof. Rama Kant &bull; Prof. Parbati Biswas &bull; Prof. Saptarshi Mukherjee &bull; Prof. Sobhan Sen &bull; Dr. Snehasis Daschakraborty
+
+      <div class="advisory-grid">
+        <div class="advisory-item">&bull; <strong>Biman Bagchi</strong> <span>(IISc Bengaluru)</span></div>
+        <div class="advisory-item">&bull; <strong>Anunay Samanta</strong> <span>(Univ of Hyderabad)</span></div>
+        <div class="advisory-item">&bull; <strong>Amalendu Chandra</strong> <span>(IIT Kanpur)</span></div>
+        <div class="advisory-item">&bull; <strong>Anindya Datta</strong> <span>(IIT Bombay)</span></div>
+
+        <div class="advisory-item">&bull; <strong>Sumana Dutta</strong> <span>(IIT Guwahati)</span></div>
+        <div class="advisory-item">&bull; <strong>Govardhan Reddy</strong> <span>(IISc Bengaluru)</span></div>
+        <div class="advisory-item">&bull; <strong>Swati De</strong> <span>(Univ of Kalyani)</span></div>
+        <div class="advisory-item">&bull; <strong>Rama Kant</strong> <span>(Univ of Delhi)</span></div>
+
+        <div class="advisory-item">&bull; <strong>Parbati Biswas</strong> <span>(Univ of Delhi)</span></div>
+        <div class="advisory-item">&bull; <strong>Saptarshi Mukherjee</strong> <span>(IISER Bhopal)</span></div>
+        <div class="advisory-item">&bull; <strong>Sobhan Sen</strong> <span>(JNU New Delhi)</span></div>
+        <div class="advisory-item">&bull; <strong>Snehasis Daschakraborty</strong> <span>(IIT Patna)</span></div>
       </div>
     </div>
 
-    <!-- 7. Footer -->
+    <!-- 9. Footer -->
     <footer class="footer">
       <div class="qr-group">
         <img src="./images/fpc2026_qr.svg" alt="QR Code" class="qr-code">
