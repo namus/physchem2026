@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <title>Frontiers of Physical Chemistry 2026 (FPC 2026) - A4 Flyer</title>
   
-  <!-- Fonts -->
+  <!-- Premium Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -33,7 +33,7 @@
       width: 1200px;
       height: 1697px;
       background: #ffffff;
-      padding: 40px 50px 32px 50px;
+      padding: 44px 50px 34px 50px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -47,17 +47,27 @@
       top: 0;
       left: 0;
       right: 0;
-      height: 9px;
-      background: linear-gradient(90deg, #071326 0%, #0d9488 50%, #d97706 100%);
+      height: 10px;
+      background: linear-gradient(90deg, #071326 0%, #0d9488 40%, #d97706 100%);
     }
 
     .corner-glow {
       position: absolute;
       top: 0;
       right: 0;
-      width: 320px;
-      height: 320px;
+      width: 350px;
+      height: 350px;
       background: radial-gradient(circle at top right, rgba(13, 148, 136, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .corner-glow-left {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle at bottom left, rgba(217, 119, 6, 0.05) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -71,8 +81,8 @@
     }
 
     .logo-fpc {
-      width: 86px;
-      height: 86px;
+      width: 90px;
+      height: 90px;
       border-radius: 50%;
       object-fit: cover;
       border: 3.5px solid #d97706;
@@ -89,7 +99,7 @@
 
     .inst-title {
       font-family: 'Outfit', sans-serif;
-      font-size: 21pt;
+      font-size: 21.5pt;
       font-weight: 800;
       color: #071326;
       letter-spacing: -0.01em;
@@ -111,15 +121,15 @@
       text-transform: uppercase;
       letter-spacing: 0.08em;
       color: #0f766e;
-      background: rgba(13, 148, 136, 0.12);
+      background: rgba(13, 148, 136, 0.1);
       padding: 3.5px 18px;
       border-radius: 999px;
-      margin-top: 5px;
+      margin-top: 6px;
       border: 1.5px solid rgba(13, 148, 136, 0.3);
     }
 
     .logo-snb {
-      height: 86px;
+      height: 90px;
       width: auto;
       border-radius: 8px;
       border: 2px solid #0d9488;
@@ -133,11 +143,12 @@
     /* 2. Conference Title Section */
     .title-section {
       text-align: center;
+      margin: 2px 0 0 0;
     }
 
     .conf-main-title {
       font-family: 'Outfit', sans-serif;
-      font-size: 30pt;
+      font-size: 30.5pt;
       font-weight: 900;
       color: #071326;
       line-height: 1.12;
@@ -151,7 +162,7 @@
 
     .conf-subtitle {
       font-family: 'Outfit', sans-serif;
-      font-size: 16pt;
+      font-size: 16.5pt;
       font-weight: 700;
       color: #b45309;
       margin-bottom: 2px;
@@ -181,12 +192,12 @@
       display: flex;
       align-items: center;
       gap: 12px;
-      font-size: 12.8pt;
+      font-size: 13pt;
     }
 
     .meta-icon {
-      width: 23px;
-      height: 23px;
+      width: 24px;
+      height: 24px;
       color: #f59e0b;
       flex-shrink: 0;
     }
@@ -232,7 +243,7 @@
       background: #f8fafc;
       border: 1px solid #e2e8f0;
       border-radius: 8px;
-      padding: 11px 11px;
+      padding: 11px 12px;
       display: flex;
       align-items: flex-start;
       gap: 9px;
@@ -241,8 +252,8 @@
     }
 
     .theme-icon {
-      width: 19px;
-      height: 19px;
+      width: 20px;
+      height: 20px;
       color: #0f766e;
       flex-shrink: 0;
       margin-top: 1px;
@@ -268,7 +279,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 10px;
+      margin-bottom: 9px;
       padding-bottom: 5px;
       border-bottom: 1.5px solid #e2e8f0;
     }
@@ -616,6 +627,7 @@
   <div class="flyer-container">
     <div class="top-gradient-bar"></div>
     <div class="corner-glow"></div>
+    <div class="corner-glow-left"></div>
 
     <!-- 1. Header -->
     <header class="header">
@@ -639,7 +651,7 @@
         Experiments, Computations and Theory
       </div>
       <div class="conf-tagline">
-        A flagship national meeting of Physical Chemistry in India
+        A flagship meeting of Physical Chemistry in India
       </div>
 
       <!-- Dates & Venue Meta Banner -->
@@ -789,7 +801,7 @@
             <span class="date-val">20th Aug, 2026</span>
           </div>
           <div class="date-row">
-            <span class="date-label">Last Date for Abstract:</span>
+            <span class="date-label">Last Date for Abstract Submission:</span>
             <span class="date-val">10th Sept, 2026</span>
           </div>
           <div class="date-row">
@@ -824,8 +836,8 @@
           <thead>
             <tr>
               <th>Delegate Category</th>
-              <th>With Accomm.</th>
-              <th>No Accomm.</th>
+              <th>With Shared Accomm.</th>
+              <th>Without Accomm.</th>
             </tr>
           </thead>
           <tbody>
@@ -891,7 +903,7 @@
     <div class="advisory-box">
       <div class="advisory-title-row">
         <span class="advisory-title">National Advisory Committee</span>
-        <span style="font-size: 8.4pt; color: #64748b; font-weight: 600;">12 Distinguished Members</span>
+        <span style="font-size: 8.6pt; color: #64748b; font-weight: 600;">12 Distinguished Members</span>
       </div>
 
       <div class="advisory-grid">
