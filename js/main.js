@@ -82,10 +82,14 @@
       btn.addEventListener('click', () => {
         const targetTab = btn.getAttribute('data-tab');
 
-        presenterTabBtns.forEach(b => b.classList.remove('active'));
+        presenterTabBtns.forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
         presenterPanes.forEach(p => p.classList.remove('active'));
 
         btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
         const targetPane = document.getElementById(targetTab);
         if (targetPane) {
           targetPane.classList.add('active');
@@ -117,13 +121,16 @@
           faqItems.forEach(other => {
             other.classList.remove('open');
             const otherAns = other.querySelector('.faq-answer');
+            const otherBtn = other.querySelector('.faq-question');
             if (otherAns) otherAns.style.maxHeight = null;
+            if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
           });
 
           // Open current if it was not open
           if (!isOpen) {
             item.classList.add('open');
             answer.style.maxHeight = answer.scrollHeight + 'px';
+            questionBtn.setAttribute('aria-expanded', 'true');
           }
         });
       }

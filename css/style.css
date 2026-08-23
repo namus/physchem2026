@@ -99,7 +99,7 @@ a {
 }
 
 a:hover {
-  color: var(--accent-teal);
+  color: var(--accent-teal-dark);   /* AA on white: 5.47:1 */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -808,4 +808,47 @@ ul, ol {
 .back-to-top:hover {
   background-color: var(--accent-teal-dark);
   transform: translateY(-3px);
+}
+
+/* ==========================================================================
+   Phase 1 additions — 23 Aug 2026
+   ========================================================================== */
+
+/* Skip link: visible only when focused by keyboard. */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 2000;
+  padding: 0.75rem 1.25rem;
+  background: var(--bg-dark);
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 0 0 var(--radius-md) 0;
+}
+.skip-link:focus {
+  left: 0;
+  outline: 3px solid var(--accent-gold-light);
+  outline-offset: 2px;
+}
+
+/* Visible keyboard focus everywhere (was relying on the UA default,
+   which is invisible against the dark hero). */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--accent-gold-hover);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+/* Respect reduced-motion preferences. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
