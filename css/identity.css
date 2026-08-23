@@ -1,0 +1,315 @@
+/* ==========================================================================
+   FPC 2026 — conference visual identity
+   Aligns the website with the printed conference poster: warm paper ground,
+   near-black ink, deep teal, a single magenta accent, and a text serif for
+   display type. Loaded last; removing this one <link> reverts the site to
+   its previous appearance.
+   Palette values sampled directly from FPC2026_Poster.pdf.
+   ========================================================================== */
+
+:root {
+  /* --- poster palette ------------------------------------------------- */
+  --ink:            #1e1e1e;   /* headings and body        14.9:1 on paper */
+  --ink-muted:      #4a4a48;   /* secondary text            7.9:1 on paper */
+  --ink-subtle:     #6b6b68;   /* captions, meta            5.2:1 on paper */
+  --paper:          #f2f2f0;   /* page ground                             */
+  --teal:           #0b4557;   /* structural accent         9.4:1 on paper */
+  --teal-deep:      #072f3c;
+  --magenta:        #b3145f;   /* single highlight          5.9:1 on paper */
+  --magenta-deep:   #8d0f4a;
+  --rule:           #d8d8d4;
+
+  /* --- remap the existing token names onto the new palette ------------- */
+  --primary-900: var(--teal-deep);
+  --primary-800: var(--teal);
+  --primary-700: var(--teal);
+  --primary-600: var(--teal);
+  --primary-500: var(--teal);
+
+  --accent-teal:        var(--teal);
+  --accent-teal-light:  #12657d;
+  --accent-teal-dark:   var(--teal);
+  --accent-gold:        var(--magenta);
+  --accent-gold-light:  #d4327c;
+  --accent-gold-hover:  var(--magenta-deep);
+
+  --bg-main:        var(--paper);
+  --bg-surface:     #ffffff;
+  --bg-surface-alt: #eaeae6;
+  --bg-dark:        var(--teal-deep);
+  --bg-dark-card:   var(--teal);
+
+  --text-main:   var(--ink);
+  --text-muted:  var(--ink-muted);
+  --text-subtle: var(--ink-subtle);
+  --text-light:  #f2f2f0;
+  --text-white:  #ffffff;
+
+  --border-light: var(--rule);
+  --border-dark:  rgba(255, 255, 255, 0.16);
+  --border-gold:  rgba(179, 20, 95, 0.35);
+
+  /* Print-derived design: hairlines and flat planes, not floating cards. */
+  --shadow-sm: none;
+  --shadow-md: 0 1px 2px rgba(30, 30, 30, 0.06);
+  --shadow-lg: 0 2px 6px rgba(30, 30, 30, 0.07);
+  --shadow-xl: 0 3px 10px rgba(30, 30, 30, 0.08);
+  --shadow-glow: none;
+
+  --glass-bg: rgba(242, 242, 240, 0.94);
+  --glass-border: var(--rule);
+
+  --radius-sm: 2px;
+  --radius-md: 3px;
+  --radius-lg: 4px;
+
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Source Serif 4', 'Source Serif Pro', Charter, Georgia, 'Times New Roman', serif;
+}
+
+body { background: var(--paper); }
+
+/* --- display type ----------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  color: var(--ink);
+}
+.section-title { font-weight: 600; letter-spacing: -0.015em; }
+.hero-title, h1 { font-weight: 700; }
+
+/* Eyebrow labels: the poster sets these as letterspaced teal small caps,
+   not as filled pills. */
+.section-badge {
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  color: var(--teal) !important;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+/* --- buttons: flat, rectangular, no lift ------------------------------ */
+.btn { border-radius: var(--radius-sm); font-weight: 600; }
+.btn:hover { transform: none !important; }
+.btn-gold, .btn-primary {
+  background: var(--magenta) !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+}
+.btn-gold:hover, .btn-primary:hover { background: var(--magenta-deep) !important; }
+.btn-teal, .btn-secondary {
+  background: var(--teal) !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+}
+.btn-teal:hover, .btn-secondary:hover { background: var(--teal-deep) !important; }
+.btn-outline { border: 1px solid currentColor; background: none; box-shadow: none; }
+
+/* --- hero: paper ground, as on the poster ----------------------------- */
+.hero-section {
+  background: var(--paper);
+  color: var(--ink);
+  min-height: 0;
+  padding-bottom: 3.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+.hero-bg-overlay, .hero-particles { display: none; }
+.hero-section .hero-title,
+.hero-section h1 { color: var(--ink); }
+.hero-title .gradient-text,
+.hero-section h1 span {
+  background: none !important;
+  -webkit-text-fill-color: currentColor !important;
+  color: var(--ink) !important;
+}
+.hero-subtitle { color: var(--teal) !important; font-family: var(--font-heading); font-style: italic; font-weight: 400; }
+.hero-section p, .hero-section li, .hero-section span { color: var(--ink-muted); }
+.hero-section strong { color: var(--ink); }
+.hero-logos-showcase {
+  background: none !important;
+  border: none !important;
+  border-bottom: 1px solid var(--rule) !important;
+  border-radius: 0 !important;
+  padding-left: 0 !important;
+  padding-bottom: 1rem !important;
+  margin-bottom: 1.75rem !important;
+}
+.hero-logo-meta span, .hero-logo-meta strong { color: var(--ink) !important; }
+
+/* The abstract panel becomes a bordered sheet, not a glowing dark card. */
+.hero-card {
+  background: #ffffff !important;
+  border: 1px solid var(--rule) !important;
+  border-top: 3px solid var(--magenta) !important;
+  border-radius: var(--radius-sm) !important;
+  box-shadow: none !important;
+  color: var(--ink) !important;
+}
+.hero-card * { color: var(--ink) !important; }
+.hero-card .hero-card-title { font-family: var(--font-heading); font-size: 1.3rem; font-weight: 600; }
+.hero-card .hero-card-status { color: var(--magenta) !important; font-weight: 600; }
+.hero-card .btn-primary, .hero-card .btn-primary * { color: #ffffff !important; }
+.hero-card .btn-outline { color: var(--teal) !important; border-color: var(--rule) !important; }
+.hero-card .btn-outline * { color: var(--teal) !important; }
+.hero-card ul strong { color: var(--teal) !important; }
+
+/* --- surfaces: hairline rules instead of drop shadows ----------------- */
+.card-panel, .theme-card, .committee-card, .travel-card, .faq-item {
+  border: 1px solid var(--rule) !important;
+  box-shadow: none !important;
+  border-radius: var(--radius-sm) !important;
+}
+.theme-card:hover, .committee-card:hover, .travel-card:hover { transform: none !important; }
+.theme-card { background: #ffffff; }
+.theme-icon-wrapper { background: none !important; color: var(--magenta) !important; border-radius: 0 !important; }
+.theme-title { font-size: 1.08rem; }
+.section-alt { background: #eaeae6; }
+
+/* --- announcement strip ----------------------------------------------- */
+.announce-bar { background: var(--teal); }
+.announce-dot { background: var(--magenta); }
+.announce-link:hover { color: #f0a9c9; }
+
+/* --- header ------------------------------------------------------------ */
+.site-header { background: rgba(242, 242, 240, 0.95); border-bottom: 1px solid var(--rule); }
+.site-header.scrolled { background: rgba(242, 242, 240, 0.98); }
+.site-header.scrolled .nav-link { color: var(--ink-muted); }
+.nav-link { font-weight: 500; }
+
+/* --- committees -------------------------------------------------------- */
+.committee-avatar { background: var(--teal) !important; color: #ffffff !important; border-radius: 50%; }
+.committee-role-badge { color: var(--magenta) !important; background: none !important; }
+.committee-name { font-family: var(--font-heading); font-weight: 600; }
+
+/* --- dates timeline ---------------------------------------------------- */
+.date-node.active .date-dot, .date-dot-inner { background: var(--magenta) !important; }
+.date-label { color: var(--magenta) !important; letter-spacing: 0.12em; }
+.date-title { font-family: var(--font-heading); }
+
+/* --- tables ------------------------------------------------------------ */
+.pricing-table thead { background: var(--teal) !important; }
+.pricing-table thead th { color: #ffffff !important; }
+.fee-badge { background: none !important; color: var(--ink) !important; font-weight: 700;
+             font-family: var(--font-heading); font-size: 1.02rem; }
+
+/* --- footer ------------------------------------------------------------ */
+.site-footer { background: var(--teal-deep); }
+
+@media (max-width: 900px) {
+  .hero-card { margin-top: 2rem; }
+}
+
+/* ==========================================================================
+   Corrections after visual review
+   ========================================================================== */
+
+/* The hero was designed for a dark ground; drop the effects that only made
+   sense against it. */
+.hero-section h1,
+.hero-section .hero-title,
+.hero-section .hero-subtitle,
+.hero-section p { text-shadow: none !important; }
+
+/* Outline buttons inherited white text from the dark hero and became
+   invisible on paper. */
+.hero-section .btn-outline {
+  color: var(--teal) !important;
+  border-color: var(--teal) !important;
+  background: none !important;
+}
+.hero-section .btn-outline:hover {
+  background: var(--teal) !important;
+  color: #ffffff !important;
+}
+.hero-section .btn-outline * { color: inherit !important; }
+
+/* Status dot: use the accent, not a stock green. */
+.pulse-dot { background-color: var(--magenta) !important; }
+
+/* Body copy inside cards stays ink, never accent-coloured. */
+.theme-desc, .section-desc, .faq-answer p { color: var(--ink-muted) !important; }
+.theme-title { color: var(--teal) !important; }
+
+/* Five themes read better as 3 + 2 than as 4 + 1. */
+@media (min-width: 1024px) {
+  .themes-grid { grid-template-columns: repeat(3, 1fr) !important; }
+}
+
+/* Give the paper ground room to breathe — the poster's restraint comes
+   largely from its margins. */
+.section { padding-top: 5rem; padding-bottom: 5rem; }
+.section-header { margin-bottom: 3rem; }
+.section-title { margin-top: 0.4rem; }
+
+/* Hairline above the footer rather than a hard colour change. */
+.site-footer { border-top: 3px solid var(--magenta); }
+
+/* .btn-outline was authored white-on-dark. On the paper ground it rendered
+   white-on-white (1.00:1) wherever it sat outside the hero. Give it an
+   explicit colour, and invert it only on dark surfaces. */
+.btn-outline {
+  color: var(--teal) !important;
+  border-color: var(--rule) !important;
+  background: #ffffff !important;
+}
+.btn-outline * { color: inherit !important; }
+.btn-outline:hover {
+  background: var(--teal) !important;
+  color: #ffffff !important;
+  border-color: var(--teal) !important;
+}
+.site-footer .btn-outline,
+.bg-dark .btn-outline {
+  color: #ffffff !important;
+  background: transparent !important;
+  border-color: var(--border-dark) !important;
+}
+
+/* The "registration opens" placeholder is a statement, not a button. */
+.reg-section-grid [aria-disabled="true"] {
+  background: none !important;
+  color: var(--ink-muted) !important;
+  border: 1px dashed var(--rule) !important;
+  opacity: 1 !important;
+  font-weight: 600;
+  font-family: var(--font-sans);
+}
+
+/* --- remaining contrast repairs (found by automated audit) ------------- */
+
+/* Image caption sat white on the light band once the ground changed. */
+.venue-caption {
+  background: rgba(11, 69, 87, 0.88) !important;
+  color: #ffffff !important;
+}
+
+/* Small tinted "chip" labels were mixed against the old teal. Restate the
+   tint against paper. Scoped to real chips -- an earlier wildcard caught the
+   hero tagline by mistake. */
+.committee-block-header span[style],
+.presenter-pane span[style*="border-radius"] {
+  background: rgba(11, 69, 87, 0.10) !important;
+  color: var(--teal) !important;
+}
+
+/* Footer: the old accent tints are too dim on the deep-teal ground. */
+.site-footer,
+.site-footer p,
+.site-footer span,
+.site-footer li,
+.site-footer div { color: #d7dde0 !important; }
+.site-footer a { color: #ffffff !important; }
+.site-footer a:hover { color: #f0a9c9 !important; }
+.site-footer .footer-col-title { color: #ffffff !important; }
+.site-footer strong { color: #ffffff !important; }
+
+/* Footer venue chip. */
+.site-footer span[style*="background"] {
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: #ffffff !important;
+}
