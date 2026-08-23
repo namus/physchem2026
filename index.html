@@ -408,57 +408,55 @@
       <div class="presenter-tabs-nav">
         <button class="presenter-tab-btn active" data-tab="tab-speakers">
           <span>Invited Speakers</span>
-          <span class="presenter-tab-badge">23</span>
+          <span class="presenter-tab-badge">To be updated soon</span>
         </button>
         <button class="presenter-tab-btn" data-tab="tab-posters">
           <span>Poster Presenters</span>
-          <span class="presenter-tab-badge">Tentative</span>
+          <span class="presenter-tab-badge">To be updated soon</span>
         </button>
       </div>
 
-      <!-- Tab Pane 1: Invited Speakers (23 Sorted Alphabetically) -->
+      <!-- Tab Pane 1: Invited Speakers -->
       <div class="presenter-pane active" id="tab-speakers">
-        <div class="speakers-toolbar">
-          <div class="speaker-search-box">
-            <svg class="speaker-search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        <div style="background: var(--bg-surface); border: 2px dashed var(--border-light); border-radius: var(--radius-lg); padding: 3.5rem 2rem; max-width: 820px; margin: 0 auto; text-align: center; box-shadow: var(--shadow-sm);">
+          <div style="width: 58px; height: 58px; border-radius: 50%; background: rgba(13, 148, 136, 0.12); color: var(--accent-teal); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem auto;">
+            <svg style="width: 30px; height: 30px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 100-6 3 3 0 000 6z"></path>
             </svg>
-            <input type="text" id="speaker-search" class="speaker-search-input" placeholder="Search speakers by name, institute or topic...">
           </div>
-          <div>
-            <span id="speakers-count" style="font-size: 0.9rem; font-weight: 600; color: var(--text-subtle);">Loading speakers...</span>
-          </div>
-        </div>
-
-        <div class="speakers-grid" id="speakers-grid">
-          <!-- Rendered dynamically by js/speakers.js -->
-        </div>
-
-        <div class="speakers-footer-note">
-          <p>
-            <strong>Note:</strong> Several other eminent invited speakers, young faculty members, and post-doctoral researchers are currently being invited. The complete scientific talk titles and abstract book will be published in due course.
+          <h3 style="font-size: 1.6rem; color: var(--primary-900); margin-bottom: 0.75rem;">
+            Invited Speakers
+          </h3>
+          <p style="font-size: 1.2rem; color: var(--accent-teal-dark); font-weight: 700; margin-bottom: 1rem;">
+            To be updated soon
           </p>
+          <p style="color: var(--text-muted); font-size: 0.98rem; max-width: 640px; margin: 0 auto 1.5rem auto; line-height: 1.65;">
+            The confirmed list of distinguished invited speakers, plenary lectures, and keynote addresses will be announced here soon. Eminent physical chemists, theoreticians, and experimentalists from premier institutions across India and abroad are currently being invited.
+          </p>
+          <div style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.4rem 1.1rem; border-radius: var(--radius-full); background: rgba(13, 148, 136, 0.1); color: var(--accent-teal-dark); font-weight: 600; font-size: 0.88rem;">
+            <span>Invited Lectures &bull; Plenary Talks &bull; Young Investigator Sessions</span>
+          </div>
         </div>
       </div>
 
-      <!-- Tab Pane 2: Poster Presenters (Tentative) -->
+      <!-- Tab Pane 2: Poster Presenters -->
       <div class="presenter-pane" id="tab-posters">
         <div style="background: var(--bg-surface); border: 2px dashed var(--border-light); border-radius: var(--radius-lg); padding: 3.5rem 2rem; max-width: 820px; margin: 0 auto; text-align: center; box-shadow: var(--shadow-sm);">
-          <div style="width: 54px; height: 54px; border-radius: 50%; background: rgba(217, 119, 6, 0.12); color: var(--accent-gold); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem auto;">
-            <svg style="width: 28px; height: 28px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div style="width: 58px; height: 58px; border-radius: 50%; background: rgba(217, 119, 6, 0.12); color: var(--accent-gold); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem auto;">
+            <svg style="width: 30px; height: 30px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
             </svg>
           </div>
           <h3 style="font-size: 1.6rem; color: var(--primary-900); margin-bottom: 0.75rem;">
-            Invited Poster Presenters (Tentative)
+            Poster Presenters
           </h3>
-          <p style="font-size: 1.15rem; color: var(--accent-gold-hover); font-weight: 600; margin-bottom: 1rem;">
-            To be updated shortly
+          <p style="font-size: 1.2rem; color: var(--accent-gold-hover); font-weight: 700; margin-bottom: 1rem;">
+            To be updated soon
           </p>
-          <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 620px; margin: 0 auto 1.5rem auto; line-height: 1.6;">
-            Poster presentations by senior faculty members and research mentors are a signature feature of this conference series. The tentative list of invited poster presenters and contributed abstract slots (~90 presentations) will be announced here soon.
+          <p style="color: var(--text-muted); font-size: 0.98rem; max-width: 640px; margin: 0 auto 1.5rem auto; line-height: 1.65;">
+            Poster presentations by senior faculty members and research mentors are a signature feature of this conference series. The list of invited poster presenters and contributed abstract presentation slots (~90 presentations) will be announced here soon.
           </p>
-          <div style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.4rem 1rem; border-radius: var(--radius-full); background: rgba(13, 148, 136, 0.1); color: var(--accent-teal-dark); font-weight: 600; font-size: 0.85rem;">
+          <div style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.4rem 1.1rem; border-radius: var(--radius-full); background: rgba(217, 119, 6, 0.1); color: var(--accent-gold-hover); font-weight: 600; font-size: 0.88rem;">
             <span>Poster Display Boards: A0 Portrait (841 mm × 1189 mm)</span>
           </div>
         </div>
