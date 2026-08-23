@@ -6,33 +6,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap');
 
 :root {
-  --primary-900: #071326;
-  --primary-800: #0b1d3a;
-  --primary-700: #102a54;
-  --primary-600: #1e3a8a;
-  
-  --accent-teal: #0d9488;
-  --accent-teal-dark: #0f766e;
-  --accent-teal-light: #14b8a6;
-  --accent-gold: #d97706;
-  --accent-gold-dark: #b45309;
-  
-  --bg-page: #f1f5f9;
-  --bg-sheet: #ffffff;
-  --bg-surface-alt: #f8fafc;
-  --bg-accent-soft: rgba(13, 148, 136, 0.05);
-  
-  --text-main: #0f172a;
-  --text-muted: #334155;
-  --text-subtle: #64748b;
-  
-  --border-light: #e2e8f0;
-  --border-dark: #cbd5e1;
-  --border-teal: rgba(13, 148, 136, 0.25);
-  --border-gold: rgba(217, 119, 6, 0.3);
+  /* Conference identity — sampled from FPC2026_Poster.pdf (23 Aug 2026). */
+  --ink:          #1e1e1e;
+  --paper:        #f2f2f0;
+  --teal:         #0b4557;
+  --teal-deep:    #072f3c;
+  --magenta:      #b3145f;
+  --rule:         #d8d8d4;
+
+  --primary-900: var(--teal-deep);
+  --primary-800: var(--teal);
+  --primary-700: var(--teal);
+  --primary-600: var(--teal);
+
+  --accent-teal:       var(--teal);
+  --accent-teal-dark:  var(--teal-deep);
+  --accent-teal-light: #12657d;
+  --accent-gold:       var(--magenta);
+  --accent-gold-dark:  #8d0f4a;
+
+  --bg-page:         #e6e6e2;
+  --bg-sheet:        #ffffff;
+  --bg-surface-alt:  var(--paper);
+  --bg-accent-soft:  rgba(11, 69, 87, 0.05);
+
+  --text-main:   var(--ink);
+  --text-muted:  #4a4a48;
+  --text-subtle: #6b6b68;
+
+  --border-light: var(--rule);
+  --border-dark:  #c4c4bf;
+  --border-teal:  rgba(11, 69, 87, 0.28);
+  --border-gold:  rgba(179, 20, 95, 0.30);
 
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-heading: 'Outfit', var(--font-sans);
+  --font-heading: 'Source Serif 4', 'Source Serif Pro', Charter, Georgia, 'Times New Roman', serif;
 }
 
 *, *::before, *::after {
@@ -81,7 +89,7 @@ body {
 
 .toolbar-badge {
   background: var(--accent-gold);
-  color: var(--primary-900);
+  color: #ffffff;
   font-size: 0.75rem;
   font-weight: 700;
   padding: 0.2rem 0.5rem;
@@ -110,8 +118,8 @@ body {
 }
 
 .btn-print {
-  background: linear-gradient(135deg, var(--accent-gold) 0%, #f59e0b 100%);
-  color: var(--primary-900);
+  background: var(--magenta);
+  color: #ffffff;
   box-shadow: 0 2px 8px rgba(217, 119, 6, 0.3);
 }
 
@@ -662,4 +670,56 @@ body {
     page-break-after: avoid !important;
     page-break-inside: avoid !important;
   }
+}
+
+
+/* ==========================================================================
+   Identity alignment — flat planes and hairline rules, as on the poster.
+   ========================================================================== */
+.flyer-sheet, .flyer-sheet * { text-shadow: none !important; }
+[class*="flyer"] { box-shadow: none !important; }
+.flyer-sheet { box-shadow: 0 2px 10px rgba(30,30,30,0.10) !important; }
+h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 600; letter-spacing: -0.005em; }
+
+/* ==========================================================================
+   Closing call to action (mirrors the conference poster)
+   ========================================================================== */
+.flyer-cta {
+  margin-top: 1.25rem;
+  padding: 1rem 1.1rem;
+  border-top: 2px solid var(--magenta);
+  border-bottom: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+.flyer-cta-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--magenta);
+  margin: 0 0 0.2rem;
+  line-height: 1.2;
+}
+.flyer-cta-sub {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.45;
+  max-width: 46ch;
+}
+.flyer-cta-sub strong { color: var(--teal); }
+.flyer-cta-note {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 0.78rem;
+  color: var(--teal);
+  margin: 0;
+  text-align: right;
+  max-width: 26ch;
+  flex: none;
+}
+@media print {
+  .flyer-cta { break-inside: avoid; }
 }
