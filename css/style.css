@@ -61,6 +61,7 @@
   
   --container-max: 1260px;
   --header-height: 80px;
+  --announce-height: 44px;
 }
 
 /* Reset & Box Sizing */
@@ -72,7 +73,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: calc(var(--header-height) + 15px);
+  scroll-padding-top: calc(var(--header-height) + var(--announce-height) + 15px);
   -webkit-text-size-adjust: 100%;
 }
 
@@ -428,7 +429,7 @@ ul, ol {
 .hero-section {
   position: relative;
   min-height: 92vh;
-  padding-top: calc(var(--header-height) + 1.25rem);
+  padding-top: calc(var(--header-height) + var(--announce-height) + 1.25rem);
   padding-bottom: 4.5rem;
   display: flex;
   align-items: center;

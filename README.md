@@ -19,7 +19,6 @@ Website for the flagship national conference **"Frontiers of Physical Chemistry:
 ├── js/
 │   ├── main.js                  # Navigation, sticky header, scrollspy, mobile drawer, modal
 │   ├── countdown.js             # Live countdown to Oct 28, 2026 + Google Cal / .ICS export
-│   ├── speakers.js              # 34 pre-populated speakers + real-time search & filter
 │   └── schedule.js              # Tabbed scientific program day-switcher
 ├── images/
 │   ├── conference_logo.jpeg     # Conference logo
@@ -72,19 +71,13 @@ Because this website uses 100% standard static HTML5, CSS3, and modern vanilla J
 ## ✏️ Updating Content
 
 ### 1. Updating Speakers & Talk Titles
-Open `js/speakers.js` and add/edit the objects inside `speakersData`:
-```javascript
-{
-  name: "Prof. Speaker Name",
-  institution: "Institution Name",
-  category: "iits", // options: 'iits', 'iisers', 'iisc-tifr-jncasr', 'research-institutes', 'universities', 'snbncbs'
-  categoryLabel: "IITs",
-  topic: "Specific Talk Title"
-}
-```
+The speaker list is deliberately not published yet. `js/speakers.js` was removed on
+23 Aug 2026 because it was dead code (its mount points did not exist) containing an
+unverified speaker list. Rebuild it from the participants spreadsheet when the list is
+approved for release.
 
 ### 2. Updating Registration / Google Form Links
-In `index.html`, search for `href="#registration"` or `href="#contact"` and replace with your live Google Form URL or payment gateway link.
+The abstract form is already linked (three places: announcement bar, hero card, abstract card). For registration, search for `Registration opens 1 September 2026` in `index.html` and replace that placeholder with the live link.
 
 ### 3. Updating Dates or Schedule
 - **Dates**: Edit the `dates-timeline` section in `index.html`.
