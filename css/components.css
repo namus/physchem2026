@@ -982,3 +982,237 @@
   .announce-inner { font-size: 0.74rem; }
   .announce-link { font-size: 0.74rem; }
 }
+
+/* ==========================================================================
+   Sponsors
+   ========================================================================== */
+
+.sponsor-intro {
+  max-width: 62rem;
+  margin: 0 0 2.5rem;
+}
+
+.sponsor-intro p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.75;
+  margin-bottom: 0.9rem;
+}
+
+.sponsor-subhead {
+  font-size: 1.35rem;
+  color: var(--primary-900);
+  margin: 0 0 1.25rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.sponsor-tiers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+/* The catch-all tier reads as a footnote to the four named tiers, not a peer. */
+.sponsor-other {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+  min-width: 0;
+  padding: 1.35rem 1.5rem;
+  margin-bottom: 1.5rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-left: 3px solid var(--border-light);
+  border-radius: var(--radius-md);
+}
+
+.sponsor-other-head {
+  flex: 0 0 13rem;
+  min-width: 0;
+}
+
+.sponsor-other-head .sponsor-tier-name { font-size: 1.1rem; }
+.sponsor-other-head .sponsor-tier-amount { margin-bottom: 0; }
+
+.sponsor-other ul {
+  flex: 1 1 24rem;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 0 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sponsor-other li {
+  position: relative;
+  padding-left: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.sponsor-other li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--text-subtle);
+}
+
+.sponsor-tier {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-top: 3px solid var(--tier, var(--accent-teal));
+  border-radius: var(--radius-md);
+  padding: 1.5rem 1.35rem;
+}
+
+.sponsor-tier-name {
+  font-size: 1.2rem;
+  color: var(--primary-900);
+  margin: 0 0 0.2rem;
+}
+
+.sponsor-tier-amount {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--text-muted);
+  margin-bottom: 1.1rem;
+}
+
+.sponsor-tier ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sponsor-tier li {
+  position: relative;
+  padding-left: 1.1rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.sponsor-tier li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--tier, var(--accent-teal));
+}
+
+.sponsor-note {
+  max-width: 62rem;
+  margin: 0 0 3rem;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: var(--text-subtle);
+}
+
+.sponsor-shelf-intro {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: -0.5rem 0 1.25rem;
+}
+
+.sponsor-shelves {
+  margin-bottom: 3rem;
+}
+
+.sponsor-shelf {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  min-width: 0;
+  padding: 1.05rem 1.25rem;
+  margin-bottom: 0.6rem;
+  background: var(--bg-surface);
+  border: 1px dashed var(--border-light);
+  border-left: 3px solid var(--tier, var(--accent-teal));
+  border-radius: var(--radius-md);
+}
+
+.sponsor-shelf-label {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--primary-900);
+  flex: 0 0 7rem;
+}
+
+.sponsor-shelf-slot {
+  font-size: 0.875rem;
+  font-style: italic;
+  color: var(--text-subtle);
+}
+
+.sponsor-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 1.75rem 1.85rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-left: 3px solid var(--accent-gold);
+  border-radius: var(--radius-md);
+}
+
+.sponsor-cta-text {
+  flex: 1 1 22rem;
+  min-width: 0;
+}
+
+.sponsor-cta-text h3 {
+  font-size: 1.2rem;
+  color: var(--primary-900);
+  margin: 0 0 0.5rem;
+}
+
+.sponsor-cta-text p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.sponsor-cta-action {
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+@media (max-width: 640px) {
+  .sponsor-cta { padding: 1.35rem 1.25rem; }
+  .sponsor-cta-action .btn { width: 100%; justify-content: center; }
+  .sponsor-shelf-label { flex: 0 0 auto; }
+}
+
+/* --------------------------------------------------------------------------
+   Main navigation: with eight items the bar outgrew the viewport between the
+   drawer breakpoint (1080px) and roughly 1300px. Tighten spacing and type in
+   that band so every item stays on screen; above it, nothing changes.
+   -------------------------------------------------------------------------- */
+@media (min-width: 1080px) and (max-width: 1320px) {
+  .nav-menu { gap: 0.7rem; }
+  .nav-menu .nav-link { font-size: 0.8rem; padding-left: 0.1rem; padding-right: 0.1rem; }
+}
