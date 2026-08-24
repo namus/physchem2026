@@ -335,3 +335,16 @@ h1, h2, h3, h4, h5, h6 {
    sitting hard left while the rest of the card was centred. */
 .card-panel[style*="text-align: center"] .section-badge,
 .card-panel[style*="text-align:center"] .section-badge { display: block; text-align: center; }
+
+/* Long call-to-action labels were clipped on phones: .btn is inline-flex with
+   white-space: nowrap, so a label wider than its box overflowed on both sides
+   with no ellipsis and no scroll. Let button labels wrap, and balance the
+   line break so a two-line label doesn't leave one word stranded. */
+.btn[style*="width: 100%"],
+.btn[style*="width:100%"],
+.btn-block {
+  display: flex;
+  white-space: normal;
+  text-wrap: balance;
+  text-align: center;
+}
