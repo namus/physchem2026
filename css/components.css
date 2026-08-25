@@ -1292,3 +1292,24 @@
   .presenter-list-panel { padding: 1.4rem 1.25rem; }
   .presenter-list { columns: 1; }
 }
+
+
+/* Start and end times, in the Program Schedule card. Left-aligned inside a centred
+   card so the two sentences read as a note rather than a second headline. */
+.program-timing-note {
+  max-width: 440px;
+  margin: 0 auto 1.5rem;
+  padding: 0.9rem 1.1rem;
+  text-align: left;
+  background: rgba(13, 148, 136, 0.07);
+  border-left: 3px solid var(--accent-teal);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+.program-timing-note strong {
+  color: var(--primary-900);
+  font-weight: 700;
+}
