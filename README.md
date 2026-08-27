@@ -71,10 +71,17 @@ Because this website uses 100% standard static HTML5, CSS3, and modern vanilla J
 ## ✏️ Updating Content
 
 ### 1. Updating Speakers & Talk Titles
-The speaker list is deliberately not published yet. `js/speakers.js` was removed on
-23 Aug 2026 because it was dead code (its mount points did not exist) containing an
-unverified speaker list. Rebuild it from the participants spreadsheet when the list is
-approved for release.
+The confirmed participant lists went live on 27 Aug 2026: three tabs in the
+`#presenters` section — Speakers, Poster Presentations and Session Chairs — written
+directly into `index.html` as static `<ul class="presenter-list">` markup.
+
+**Do not hand-edit these lists.** They are generated from the invitation tracker
+spreadsheet, exported as `FPC2026_Confirmed_For_Website_<date>.csv`. To update: regenerate
+that CSV from the tracker, then drive the markup from it with a script. Retyping names by
+hand is how a decliner ends up published.
+
+`js/speakers.js` was removed on 23 Aug 2026 — it was dead code (its mount points did not
+exist) holding an unverified speaker list. Do not resurrect it.
 
 ### 2. Updating Registration / Google Form Links
 The abstract form is already linked (three places: announcement bar, hero card, abstract card). For registration, search for `Registration opens 1 September 2026` in `index.html` and replace that placeholder with the live link.

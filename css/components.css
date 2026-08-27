@@ -253,7 +253,7 @@
   border: 1px solid var(--border-light);
   border-radius: var(--radius-full);
   padding: 0.35rem;
-  max-width: 480px;
+  max-width: 620px;
   margin: 0 auto 2.5rem auto;
   box-shadow: var(--shadow-sm);
 }
@@ -966,7 +966,10 @@
 .venue-grid > * { min-width: 0; }
 .pricing-table-wrapper { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 @media (max-width: 640px) {
-  .presenter-tabs { flex-wrap: wrap; }
+  /* NOTE: the markup class is .presenter-tabs-nav — the old selector here was
+     .presenter-tabs, which matches nothing, so this guard never applied.
+     Fixed 27 Aug 2026 when a third tab (Session Chairs) was added. */
+  .presenter-tabs-nav { flex-wrap: wrap; border-radius: var(--radius-lg); }
   .presenter-tab-btn { flex: 1 1 100%; }
 }
 
