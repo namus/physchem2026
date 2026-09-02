@@ -153,7 +153,9 @@ h1, h2, h3, h4, h5, h6 {
 .hero-card * { color: var(--ink) !important; }
 .hero-card .hero-card-title { font-family: var(--font-heading); font-size: 1.3rem; font-weight: 600; }
 .hero-card .hero-card-status { color: var(--magenta) !important; font-weight: 600; }
-.hero-card .btn-primary, .hero-card .btn-primary * { color: #ffffff !important; }
+.hero-card .btn-primary, .hero-card .btn-primary *,
+.hero-card .btn-gold,    .hero-card .btn-gold *,
+.hero-card .btn-teal,    .hero-card .btn-teal *    { color: #ffffff !important; }
 .hero-card .btn-outline { color: var(--teal) !important; border-color: var(--rule) !important; }
 .hero-card .btn-outline * { color: var(--teal) !important; }
 .hero-card ul strong { color: var(--teal) !important; }

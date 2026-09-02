@@ -979,6 +979,7 @@
   .announce-inner { font-size: 0.8rem; gap: 0.3rem 0.55rem; flex-wrap: nowrap; }
   .announce-dot { display: none; }
   .announce-detail { display: none; }   /* the deadline is repeated in the hero card below */
+  .announce-secondary { display: none; }  /* keep one call to action on small screens */
   .announce-link { font-size: 0.8rem; }
 }
 @media (max-width: 380px) {
