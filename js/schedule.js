@@ -15,8 +15,9 @@
         const targetId = button.getAttribute('data-tab');
 
         // Toggle active buttons
-        tabButtons.forEach(btn => btn.classList.remove('active'));
+        tabButtons.forEach(btn => { btn.classList.remove('active'); btn.setAttribute('aria-selected', 'false'); });
         button.classList.add('active');
+        button.setAttribute('aria-selected', 'true');
 
         // Toggle active panes
         panes.forEach(pane => {

@@ -1317,3 +1317,47 @@
   color: var(--primary-900);
   font-weight: 700;
 }
+
+/* ==========================================================================
+   Conference Programme (#schedule) — added 16 Oct 2026
+   ========================================================================== */
+.schedule-download { display:flex; flex-wrap:wrap; gap:0.75rem; align-items:center; justify-content:center; margin:0 auto 2rem auto; }
+.schedule-updated { font-size:0.85rem; color:var(--text-subtle); width:100%; text-align:center; }
+.schedule-tabs-nav { display:flex; justify-content:center; gap:0.4rem; background:var(--bg-surface); border:1px solid var(--border-light); border-radius:var(--radius-full); padding:0.35rem; max-width:720px; margin:0 auto 1.75rem auto; box-shadow:var(--shadow-sm); }
+.schedule-tab-btn { flex:1; padding:0.6rem 1rem; border-radius:var(--radius-full); border:none; background:transparent; font-family:var(--font-heading); font-size:0.95rem; font-weight:600; color:var(--text-muted); cursor:pointer; transition:all var(--transition-fast); white-space:nowrap; }
+.schedule-tab-btn.active { background:var(--primary-900); color:var(--text-white); box-shadow:var(--shadow-md); }
+.schedule-tab-btn:focus-visible { outline:2px solid var(--accent-teal-dark); outline-offset:2px; }
+.schedule-pane { display:none; }
+.schedule-pane.active { display:block; animation:fadeIn 0.3s ease; }
+.schedule-day-title { font-size:1.3rem; color:var(--primary-900); margin:0 0 0.9rem 0; }
+.schedule-table { background:var(--bg-surface); border:1px solid var(--border-light); border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow-sm); }
+.sched-row { display:grid; grid-template-columns:7.2rem 4.2rem minmax(0,1fr); gap:0.25rem 0.75rem; padding:0.6rem 1rem; border-top:1px solid var(--border-light); font-size:0.94rem; line-height:1.45; }
+.sched-row:first-child { border-top:none; }
+.sched-session { display:block; background:var(--primary-900); color:var(--text-white); padding:0.65rem 1rem; }
+.sched-sess-title { font-family:var(--font-heading); font-weight:700; letter-spacing:0.01em; }
+.sched-chair { font-size:0.88rem; color:#dbe4f3; margin-top:0.1rem; }
+.sched-time { font-variant-numeric:tabular-nums; color:var(--text-muted); white-space:nowrap; }
+.sched-slot { font-weight:700; color:var(--accent-teal-dark); white-space:nowrap; }
+.sched-speaker { font-weight:600; color:var(--text-main); }
+.sched-aff { font-weight:400; color:var(--text-muted); }
+.sched-title { font-style:italic; color:var(--text-muted); font-size:0.9rem; margin-top:0.1rem; }
+.sched-oration { font-weight:700; color:var(--primary-700); }
+.sched-online { display:inline-block; margin-left:0.35rem; padding:0 0.45rem; border-radius:var(--radius-full); font-size:0.75rem; font-weight:700; background:rgba(13,148,136,0.12); color:var(--accent-teal-dark); vertical-align:1px; }
+.sched-break { background:var(--bg-surface-alt); color:var(--text-muted); font-style:italic; }
+.sched-ceremony { font-style:normal; font-weight:700; color:var(--primary-900); }
+.sched-posters { margin-top:0.4rem; }
+.sched-posters summary { cursor:pointer; color:var(--accent-teal-dark); font-weight:600; font-size:0.9rem; }
+.sched-poster-wrap { overflow-x:auto; margin-top:0.5rem; }
+.sched-poster-table { width:100%; border-collapse:collapse; font-size:0.85rem; }
+.sched-poster-table th, .sched-poster-table td { text-align:left; padding:0.35rem 0.5rem; border-bottom:1px solid var(--border-light); vertical-align:top; }
+.sched-poster-table th { background:var(--bg-surface-alt); color:var(--primary-900); font-weight:700; }
+.sched-poster-table td:first-child { white-space:nowrap; font-weight:700; color:var(--accent-teal-dark); }
+.schedule-legend { margin-top:1.25rem; font-size:0.85rem; color:var(--text-subtle); text-align:center; line-height:1.6; }
+@media (max-width:640px) {
+  .schedule-tabs-nav { flex-wrap:wrap; border-radius:var(--radius-lg); }
+  .schedule-tab-btn { flex:1 1 45%; }
+  .sched-row { grid-template-columns:auto minmax(0,1fr); padding:0.55rem 0.75rem; }
+  .sched-row .sched-body { grid-column:1 / -1; }
+  .sched-break .sched-slot, .sched-poster .sched-slot { display:none; }
+  .sched-poster-table { font-size:0.8rem; }
+}
