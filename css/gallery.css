@@ -1,0 +1,35 @@
+/* FPC 2026 photo gallery (gallery.html). Uses the tokens from style.css / identity.css. */
+.gal-hero{padding:calc(var(--header-height,80px) + var(--announce-height,44px) + 2rem) 0 2.5rem;background:var(--bg-main);border-bottom:1px solid var(--rule,#d8d8d4)}
+.gal-hero .section-header{text-align:left;max-width:52rem;margin:0}
+.gal-hero .section-desc{max-width:46rem;margin-left:0}
+.gal-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.5rem;align-items:center}
+.gal-note{font-size:.85rem;color:var(--text-subtle)}
+.gal-daynav{position:sticky;top:calc(var(--header-height,80px) + var(--announce-height,44px));z-index:20;background:var(--glass-bg,rgba(242,242,240,.94));backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--rule,#d8d8d4)}
+.gal-daynav ul{display:flex;gap:.25rem;list-style:none;margin:0;padding:.6rem 0;overflow-x:auto}
+.gal-daynav a{display:block;white-space:nowrap;padding:.35rem .9rem;border-radius:var(--radius-full,999px);font-size:.875rem;font-weight:600;color:var(--teal,#0b4557);text-decoration:none;border:1px solid transparent}
+.gal-daynav a:hover,.gal-daynav a:focus-visible{border-color:var(--teal,#0b4557)}
+.gal-day{padding:2.5rem 0 1rem;scroll-margin-top:calc(var(--header-height,80px) + var(--announce-height,44px) + 56px)}
+.gal-day-title{font-size:clamp(1.4rem,2.6vw,1.9rem);margin:0 0 .5rem;color:var(--ink,#1e1e1e)}
+.gal-day-title span{display:block;font-size:.95rem;font-weight:500;color:var(--text-subtle);margin-top:.2rem;font-family:var(--font-sans)}
+.gal-sess-title{font-size:1.05rem;font-weight:600;margin:1.75rem 0 .75rem;color:var(--teal,#0b4557);font-family:var(--font-sans)}
+.gal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:.6rem}
+.gal-item{display:block;position:relative;aspect-ratio:3/2;overflow:hidden;border-radius:var(--radius-sm,6px);background:var(--bg-surface-alt,#eaeae6)}
+.gal-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease,opacity .2s ease}
+.gal-item:hover img{transform:scale(1.035)}
+.gal-item:focus-visible{outline:3px solid var(--magenta,#b3145f);outline-offset:2px}
+@media (max-width:560px){.gal-grid{grid-template-columns:repeat(2,1fr);gap:.4rem}}
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:3000;background:rgba(7,15,20,.94);display:none;flex-direction:column}
+.lb.open{display:flex}
+.lb-stage{flex:1;display:flex;align-items:center;justify-content:center;min-height:0;padding:3.5rem 4rem 0;touch-action:pan-y}
+.lb-stage img{max-width:100%;max-height:100%;object-fit:contain;box-shadow:0 6px 30px rgba(0,0,0,.5);user-select:none}
+.lb-bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.9rem 1.25rem 1.1rem;color:#e7ecee;font-size:.9rem}
+.lb-cap{flex:1;min-width:0}
+.lb-count{color:#9fb3ba;white-space:nowrap}
+.lb-links a{color:#fff;text-decoration:underline;margin-left:1rem;white-space:nowrap}
+.lb-btn{position:absolute;background:rgba(255,255,255,.1);color:#fff;border:0;width:48px;height:48px;border-radius:50%;font-size:1.6rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.lb-btn:hover,.lb-btn:focus-visible{background:rgba(255,255,255,.25);outline:none}
+.lb-close{top:.75rem;right:.75rem}
+.lb-prev{left:.75rem;top:50%;transform:translateY(-50%)}
+.lb-next{right:.75rem;top:50%;transform:translateY(-50%)}
+@media (max-width:640px){.lb-stage{padding:3.25rem .25rem 0}.lb-prev,.lb-next{top:auto;bottom:7.5rem;transform:none}.lb-bar{flex-wrap:wrap}}
